@@ -1,0 +1,88 @@
+#use-added-syntax(jitx)
+defpackage vpx-system :
+  import core
+  import jitx
+  import jitx/commands
+  import ocdb/utils/defaults
+  import ocdb/utils/generic-components
+  import ocdb/utils/checks
+  import ocdb/utils/bundles
+
+  import vpx-pin-maps
+  import vpx-profiles
+  import vpx-supports
+
+val board-shape = RoundedRectangle(160.0, 128.5, 3.0)
+
+; Your backplane (all N slots) goes here
+pcb-module backplane-unit :
+  pin gnd
+  port pwr : px-power
+
+  ; You can just use the existing profiles we have here, or stub out new ones as you go along (easy to change later)
+  public inst SWH-1 : SLT3-SWH-6F8U-14_4_15()
+  public inst SWH-2 : SLT3-SWH-6F8U-14_4_15()
+  public inst IO : SLT3-PAY-2U2U-14_2_17()[2]
+
+  connect-x4-pci-e(SWH-1, SWH-2)
+
+  connect-pipe(SWH-1.data-plane[5] SWH-2.data-plane[4])
+
+  net (SWH-1.control-plane-tp SWH-2.control-plane-tp)
+
+  ; This code places the slots mechanically, and hooks SWH-2 the utility signals
+  ; Change [Slot1 Slot2 Slot3 Slot4 Slot5] to reflect the mechanical order of the cards left to right
+  var prev-slot = SWH-1
+  for (l in row-locs(C, 5, 25.4), slot in [SWH-1 SWH-2 IO[0] IO[1]]) do :
+    place(slot) at l * loc(0.0, -22.0, 90.0) on Top
+    connect-vpx-utility(SWH-1.utility, slot.utility)
+    connect-vpx-jtag(slot.utility prev-slot.utility)
+    prev-slot = slot
+
+  net v33 (pwr.P+3p3Vmain SWH-1.utility.vpx-power[0].vdd)
+  net v5 (pwr.P+5Vmain SWH-1.utility.vpx-power[1].vdd)
+  net v12 (pwr.P+12Vmain SWH-1.utility.vpx-power[2].vdd)
+  net v33aux (pwr.P+3p3Vaux SWH-1.utility.p3v3-aux)
+  net v5aux (pwr.P+12Vaux SWH-1.utility.p12v-aux)
+  symbol(v33) = ocdb/utils/symbols/altium-power-bar-sym
+  symbol(v5) = ocdb/utils/symbols/altium-power-bar-sym
+  symbol(v12) = ocdb/utils/symbols/altium-power-bar-sym
+  symbol(v33aux) = ocdb/utils/symbols/altium-power-bar-sym
+  symbol(v5aux) = ocdb/utils/symbols/altium-power-bar-sym
+
+  net bgnd (gnd pwr.POWER_RETURN SWH-1.utility.vpx-power[0].gnd SWH-1.utility.vpx-power[1].gnd SWH-1.utility.vpx-power[2].gnd)
+  symbol(bgnd) = ocdb/utils/symbols/ground-sym
+
+  geom(bgnd):
+    copper-pour(LayerIndex(1), isolate = 0.1, rank = 1) = board-shape
+
+
+; Have one module for the entire system. Add your backplane here, as well as the external connectors
+pcb-module VPX-DEMO :
+  public inst backplane : backplane-unit
+  place(backplane) at loc(0.0, 0.0) on Top
+  public inst P1 : px-power-connector ; components/TE_1-6450869-4/module
+  place(P1) at loc(50.8, 0.0, 90.0) on Top
+  require pwr-src-1:px-power from P1
+  net (pwr-src-1 backplane.pwr)
+
+  net GND ()
+  net (GND pwr-src-1.POWER_RETURN backplane.gnd)
+  symbol(GND) = ocdb/utils/symbols/ground-sym
+
+  net (pwr-src-1.DC_IN.gnd GND)
+
+  check-design(self)
+
+; Configure the design and view the result
+defn run-design (circuit:Instantiable) :
+  set-current-design("VPX-DEMO")
+  set-main-module(ocdb/utils/generator-utils/run-final-passes(circuit))
+  set-board(default-board(8, board-shape))
+  set-rules(ocdb/manufacturers/rules/sierra-adv-rules)
+  run-checks("checks.txt")
+  view-board()
+  view-schematic()
+  view-design-explorer()
+
+run-design(VPX-DEMO)

@@ -1,0 +1,989 @@
+#use-added-syntax(jitx)
+defpackage components/TE_1-6450869-4 :
+  import core
+  import collections
+  import jitx
+  import jitx/commands
+  import ocdb/utils/box-symbol
+  import ocdb/utils/property-structs
+
+  import ocdb/utils/generator-utils
+  import ocdb/utils/generic-components
+
+
+pcb-pad circle-th-pad :
+  type = TH
+  shape = Circle(0.819)
+  ocdb/utils/landpatterns/apply-soldermask(0.102)
+  layer(SolderMask(Top)) = Circle(0.819)
+  layer(SolderMask(Bottom)) = Circle(0.819)
+  layer(Cutout()) = Circle(0.546)
+
+pcb-pad rect-th-pad :
+  type = TH
+  shape = Rectangle(1.638, 1.638)
+  ocdb/utils/landpatterns/apply-soldermask(0.102)
+  layer(SolderMask(Top)) = Rectangle(1.638, 1.638)
+  layer(SolderMask(Bottom)) = Rectangle(1.638, 1.638)
+  layer(Cutout()) = Circle(0.546)
+
+public pcb-landpattern lp_TE_1-6450869-4-1 :
+  pad LP1A : circle-th-pad at loc(15.316, -3.835) on Top
+  pad LP1B : circle-th-pad at loc(15.316, -1.626) on Top
+  pad LP1C : circle-th-pad at loc(15.316, 0.584) on Top
+  pad LP1D : circle-th-pad at loc(15.316, 3.683) on Top
+  pad LP2A : circle-th-pad at loc(-26.975, -3.835) on Top
+  pad LP2B : circle-th-pad at loc(-26.975, -1.626) on Top
+  pad LP2C : circle-th-pad at loc(-26.975, 0.584) on Top
+  pad LP2D : circle-th-pad at loc(-26.975, 3.683) on Top
+  pad P1A1 : circle-th-pad at loc(32.766, -4.597) on Top
+  pad P1A2 : circle-th-pad at loc(30.226, -4.597) on Top
+  pad P1B1 : circle-th-pad at loc(32.766, -2.057) on Top
+  pad P1B2 : circle-th-pad at loc(30.226, -2.057) on Top
+  pad P1C1 : circle-th-pad at loc(32.766, 0.483) on Top
+  pad P1C2 : circle-th-pad at loc(30.226, 0.483) on Top
+  pad P1D1 : circle-th-pad at loc(32.766, 3.023) on Top
+  pad P1D2 : circle-th-pad at loc(30.226, 3.023) on Top
+  pad P2A1 : circle-th-pad at loc(25.146, -4.597) on Top
+  pad P2A2 : circle-th-pad at loc(22.606, -4.597) on Top
+  pad P2B1 : circle-th-pad at loc(25.146, -2.057) on Top
+  pad P2B2 : circle-th-pad at loc(22.606, -2.057) on Top
+  pad P2C1 : circle-th-pad at loc(25.146, 0.483) on Top
+  pad P2C2 : circle-th-pad at loc(22.606, 0.483) on Top
+  pad P2D1 : circle-th-pad at loc(25.146, 3.023) on Top
+  pad P2D2 : circle-th-pad at loc(22.606, 3.023) on Top
+  pad P3A1 : circle-th-pad at loc(-10.795, -4.597) on Top
+  pad P3A2 : circle-th-pad at loc(-13.335, -4.597) on Top
+  pad P3B1 : circle-th-pad at loc(-10.795, -2.057) on Top
+  pad P3B2 : circle-th-pad at loc(-13.335, -2.057) on Top
+  pad P3C1 : circle-th-pad at loc(-10.795, 0.483) on Top
+  pad P3C2 : circle-th-pad at loc(-13.335, 0.483) on Top
+  pad P3D1 : circle-th-pad at loc(-10.795, 3.023) on Top
+  pad P3D2 : circle-th-pad at loc(-13.335, 3.023) on Top
+  pad P4A1 : circle-th-pad at loc(-15.875, -4.597) on Top
+  pad P4A2 : circle-th-pad at loc(-18.415, -4.597) on Top
+  pad P4B1 : circle-th-pad at loc(-15.875, -2.057) on Top
+  pad P4B2 : circle-th-pad at loc(-18.415, -2.057) on Top
+  pad P4C1 : circle-th-pad at loc(-15.875, 0.483) on Top
+  pad P4C2 : circle-th-pad at loc(-18.415, 0.483) on Top
+  pad P4D1 : circle-th-pad at loc(-15.875, 3.023) on Top
+  pad P4D2 : circle-th-pad at loc(-18.415, 3.023) on Top
+  pad P5A1 : circle-th-pad at loc(-20.955, -4.597) on Top
+  pad P5A2 : circle-th-pad at loc(-23.495, -4.597) on Top
+  pad P5B1 : circle-th-pad at loc(-20.955, -2.057) on Top
+  pad P5B2 : circle-th-pad at loc(-23.495, -2.057) on Top
+  pad P5C1 : circle-th-pad at loc(-20.955, 0.483) on Top
+  pad P5C2 : circle-th-pad at loc(-23.495, 0.483) on Top
+  pad P5D1 : circle-th-pad at loc(-20.955, 3.023) on Top
+  pad P5D2 : circle-th-pad at loc(-23.495, 3.023) on Top
+  pad P6A1 : circle-th-pad at loc(-30.226, -4.597) on Top
+  pad P6A2 : circle-th-pad at loc(-32.766, -4.597) on Top
+  pad P6B1 : circle-th-pad at loc(-30.226, -2.057) on Top
+  pad P6B2 : circle-th-pad at loc(-32.766, -2.057) on Top
+  pad P6C1 : circle-th-pad at loc(-30.226, 0.483) on Top
+  pad P6C2 : circle-th-pad at loc(-32.766, 0.483) on Top
+  pad P6D1 : circle-th-pad at loc(-30.226, 3.023) on Top
+  pad P6D2 : circle-th-pad at loc(-32.766, 3.023) on Top
+  pad SA1 : rect-th-pad at loc(10.160, -4.597) on Top
+  pad SA2 : circle-th-pad at loc(7.620, -4.597) on Top
+  pad SA3 : circle-th-pad at loc(5.080, -4.597) on Top
+  pad SA4 : circle-th-pad at loc(2.540, -4.597) on Top
+  pad SA5 : circle-th-pad at loc(0.0, -4.597) on Top
+  pad SA6 : circle-th-pad at loc(-2.540, -4.597) on Top
+  pad SA7 : circle-th-pad at loc(-5.080, -4.597) on Top
+  pad SA8 : circle-th-pad at loc(-7.620, -4.597) on Top
+  pad SB1 : circle-th-pad at loc(10.160, -2.057) on Top
+  pad SB2 : circle-th-pad at loc(7.620, -2.057) on Top
+  pad SB3 : circle-th-pad at loc(5.080, -2.057) on Top
+  pad SB4 : circle-th-pad at loc(2.540, -2.057) on Top
+  pad SB5 : circle-th-pad at loc(0.0, -2.057) on Top
+  pad SB6 : circle-th-pad at loc(-2.540, -2.057) on Top
+  pad SB7 : circle-th-pad at loc(-5.080, -2.057) on Top
+  pad SB8 : circle-th-pad at loc(-7.620, -2.057) on Top
+  pad SC1 : circle-th-pad at loc(10.160, 0.483) on Top
+  pad SC2 : circle-th-pad at loc(7.620, 0.483) on Top
+  pad SC3 : circle-th-pad at loc(5.080, 0.483) on Top
+  pad SC4 : circle-th-pad at loc(2.540, 0.483) on Top
+  pad SC5 : circle-th-pad at loc(0.0, 0.483) on Top
+  pad SC6 : circle-th-pad at loc(-2.540, 0.483) on Top
+  pad SC7 : circle-th-pad at loc(-5.080, 0.483) on Top
+  pad SC8 : circle-th-pad at loc(-7.620, 0.483) on Top
+  pad SD1 : circle-th-pad at loc(10.160, 3.023) on Top
+  pad SD2 : circle-th-pad at loc(7.620, 3.023) on Top
+  pad SD3 : circle-th-pad at loc(5.080, 3.023) on Top
+  pad SD4 : circle-th-pad at loc(2.540, 3.023) on Top
+  pad SD5 : circle-th-pad at loc(0.0, 3.023) on Top
+  pad SD6 : circle-th-pad at loc(-2.540, 3.023) on Top
+  pad SD7 : circle-th-pad at loc(-5.080, 3.023) on Top
+  pad SD8 : circle-th-pad at loc(-7.620, 3.023) on Top
+
+  layer(Courtyard(Top)) = Polygon([
+    Point(-36.195, 7.620)
+    Point(-36.195, -7.874)
+    Point(36.195, -7.874)
+    Point(36.195, 7.620)])
+  layer(Silkscreen("F-SilkS", Top)) = Text(">REF", 1.0, C, loc(-33.020, 8.635), "", TrueTypeFont, false, false)
+  layer(CustomLayer("Fab")) = Text(">VALUE", 1.0, C, loc(-27.305, -8.865), "", TrueTypeFont, false, false)
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.127, [Point(-35.814, 5.969), Point(35.814, 5.969)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.127, [Point(-35.814, -5.969), Point(-35.814, 5.969)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.127, [Point(35.814, 5.969), Point(35.814, -5.969)])
+  layer(Silkscreen("F-SilkS", Top)) = Line(0.127, [Point(35.814, -5.969), Point(-35.814, -5.969)])
+  layer(Silkscreen("F-SilkS", Top)) = Polyline(0.200, [
+    Arc(10.160, -6.375, 0.100, 0.0, 360.000)])
+  layer(CustomLayer("Fab")) = Line(0.127, [Point(-35.814, 5.969), Point(35.814, 5.969)])
+  layer(CustomLayer("Fab")) = Line(0.127, [Point(-35.814, -5.969), Point(-35.814, 5.969)])
+  layer(CustomLayer("Fab")) = Line(0.127, [Point(35.814, 5.969), Point(35.814, -5.969)])
+  layer(CustomLayer("Fab")) = Line(0.127, [Point(35.814, -5.969), Point(-35.814, -5.969)])
+  layer(CustomLayer("Fab")) = Polyline(0.200, [
+    Arc(10.160, -6.375, 0.100, 0.0, 360.000)])
+
+public pcb-symbol sym_TE_1-6450869-4 :
+  pin LP1A at Point(-12.700, -5.080) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP1B at Point(-12.700, -7.620) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP1C at Point(-12.700, -10.160) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP1D at Point(-12.700, -12.700) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP2A at Point(12.700, -5.080) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP2B at Point(12.700, -7.620) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP2C at Point(12.700, -10.160) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin LP2D at Point(12.700, -12.700) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1A1 at Point(-12.700, 63.500) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1A2 at Point(-12.700, 53.340) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1B1 at Point(-12.700, 60.960) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1B2 at Point(-12.700, 50.800) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1C1 at Point(-12.700, 58.420) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1C2 at Point(-12.700, 48.260) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1D1 at Point(-12.700, 55.880) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P1D2 at Point(-12.700, 45.720) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2A1 at Point(-12.700, 40.640) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2A2 at Point(-12.700, 30.480) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2B1 at Point(-12.700, 38.100) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2B2 at Point(-12.700, 27.940) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2C1 at Point(-12.700, 35.560) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2C2 at Point(-12.700, 25.400) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2D1 at Point(-12.700, 33.020) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P2D2 at Point(-12.700, 22.860) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3A1 at Point(-12.700, 17.780) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3A2 at Point(-12.700, 7.620) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3B1 at Point(-12.700, 15.240) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3B2 at Point(-12.700, 5.080) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3C1 at Point(-12.700, 12.700) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3C2 at Point(-12.700, 2.540) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3D1 at Point(-12.700, 10.160) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P3D2 at Point(-12.700, 0.0) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4A1 at Point(12.700, 63.500) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4A2 at Point(12.700, 53.340) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4B1 at Point(12.700, 60.960) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4B2 at Point(12.700, 50.800) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4C1 at Point(12.700, 58.420) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4C2 at Point(12.700, 48.260) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4D1 at Point(12.700, 55.880) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P4D2 at Point(12.700, 45.720) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5A1 at Point(12.700, 40.640) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5A2 at Point(12.700, 30.480) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5B1 at Point(12.700, 38.100) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5B2 at Point(12.700, 27.940) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5C1 at Point(12.700, 35.560) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5C2 at Point(12.700, 25.400) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5D1 at Point(12.700, 33.020) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P5D2 at Point(12.700, 22.860) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6A1 at Point(12.700, 17.780) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6A2 at Point(12.700, 7.620) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6B1 at Point(12.700, 15.240) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6B2 at Point(12.700, 5.080) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6C1 at Point(12.700, 12.700) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6C2 at Point(12.700, 2.540) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6D1 at Point(12.700, 10.160) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin P6D2 at Point(12.700, 0.0) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA1 at Point(-12.700, -17.780) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA2 at Point(-12.700, -30.480) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA3 at Point(-12.700, -43.180) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA4 at Point(-12.700, -55.880) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA5 at Point(12.700, -17.780) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA6 at Point(12.700, -30.480) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA7 at Point(12.700, -43.180) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SA8 at Point(12.700, -55.880) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB1 at Point(-12.700, -20.320) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB2 at Point(-12.700, -33.020) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB3 at Point(-12.700, -45.720) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB4 at Point(-12.700, -58.420) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB5 at Point(12.700, -20.320) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB6 at Point(12.700, -33.020) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB7 at Point(12.700, -45.720) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SB8 at Point(12.700, -58.420) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC1 at Point(-12.700, -22.860) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC2 at Point(-12.700, -35.560) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC3 at Point(-12.700, -48.260) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC4 at Point(-12.700, -60.960) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC5 at Point(12.700, -22.860) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC6 at Point(12.700, -35.560) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC7 at Point(12.700, -48.260) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SC8 at Point(12.700, -60.960) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD1 at Point(-12.700, -25.400) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD2 at Point(-12.700, -38.100) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD3 at Point(-12.700, -50.800) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD4 at Point(-12.700, -63.500) with :
+    direction = Left
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD5 at Point(12.700, -25.400) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD6 at Point(12.700, -38.100) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD7 at Point(12.700, -50.800) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+  pin SD8 at Point(12.700, -63.500) with :
+    direction = Right
+    length = 5.080
+    number-size = 1.016
+    name-size = 1.016
+
+  layer("foreground") = Text(">REF", 1.27, C, loc(-12.700, 66.802), "", TrueTypeFont, false, false)
+  layer("foreground") = Text(">VALUE", 1.27, C, loc(-12.700, -68.580), "", TrueTypeFont, false, false)
+  layer("foreground") = Rectangle(25.400, 132.080)
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 22.860, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 15.240), Point(11.430, 15.240)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 53.340, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 10.160), Point(11.430, 10.160)])
+  layer("none") = Line(0.254, [Point(-12.700, 48.260), Point(-11.430, 48.260)])
+  layer("none") = Line(0.254, [Point(-12.700, 35.560), Point(-11.430, 35.560)])
+  layer("none") = Line(0.254, [Point(-12.700, -7.620), Point(-11.430, -7.620)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 22.860, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -12.700, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 17.780, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 5.080, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -43.180, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -55.880), Point(11.430, -55.880)])
+  layer("none") = Line(0.254, [Point(12.700, -63.500), Point(11.430, -63.500)])
+  layer("none") = Line(0.254, [Point(12.700, 50.800), Point(11.430, 50.800)])
+  layer("none") = Line(0.254, [Point(12.700, 0.0), Point(11.430, 0.0)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 27.940, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 55.880, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 63.500), Point(11.430, 63.500)])
+  layer("none") = Line(0.254, [Point(-12.700, 0.0), Point(-11.430, 0.0)])
+  layer("none") = Line(0.254, [Point(-12.700, 17.780), Point(-11.430, 17.780)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 30.480, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 33.020), Point(11.430, 33.020)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -58.420, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -5.080, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 55.880), Point(-11.430, 55.880)])
+  layer("none") = Line(0.254, [Point(-12.700, 40.640), Point(-11.430, 40.640)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -20.320, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 22.860), Point(-11.430, 22.860)])
+  layer("none") = Line(0.254, [Point(12.700, -17.780), Point(11.430, -17.780)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -20.320, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -35.560, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 7.620, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -60.960), Point(11.430, -60.960)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 63.500, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -55.880, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -30.480, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 30.480), Point(-11.430, 30.480)])
+  layer("none") = Line(0.254, [Point(12.700, 2.540), Point(11.430, 2.540)])
+  layer("none") = Line(0.254, [Point(12.700, 38.100), Point(11.430, 38.100)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -43.180, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 60.960), Point(11.430, 60.960)])
+  layer("none") = Line(0.254, [Point(-12.700, 45.720), Point(-11.430, 45.720)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -7.620, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 45.720, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 2.540), Point(-11.430, 2.540)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -48.260, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 30.480, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -20.320), Point(-11.430, -20.320)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 10.160, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 48.260), Point(11.430, 48.260)])
+  layer("none") = Line(0.254, [Point(12.700, 7.620), Point(11.430, 7.620)])
+  layer("none") = Line(0.254, [Point(-12.700, 60.960), Point(-11.430, 60.960)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 12.700, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 7.620), Point(-11.430, 7.620)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 60.960, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 2.540, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -45.720), Point(11.430, -45.720)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 58.420, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 2.65451116132741e-14, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -35.560, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 10.160), Point(-11.430, 10.160)])
+  layer("none") = Line(0.254, [Point(-12.700, 15.240), Point(-11.430, 15.240)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 45.720, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 17.780, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -50.800, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 25.400, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 33.020, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -50.800, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -17.780, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -30.480), Point(11.430, -30.480)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 5.080, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -7.620, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -50.800), Point(11.430, -50.800)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 2.540, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 10.160, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 58.420, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -63.500, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -25.400), Point(11.430, -25.400)])
+  layer("none") = Line(0.254, [Point(-12.700, -58.420), Point(-11.430, -58.420)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -10.160, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -10.160), Point(-11.430, -10.160)])
+  layer("none") = Line(0.254, [Point(12.700, -20.320), Point(11.430, -20.320)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -33.020, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -38.100, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 12.700), Point(-11.430, 12.700)])
+  layer("none") = Line(0.254, [Point(-12.700, 58.420), Point(-11.430, 58.420)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -58.420, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -63.500), Point(-11.430, -63.500)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 55.880, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -55.880), Point(-11.430, -55.880)])
+  layer("none") = Line(0.254, [Point(12.700, -22.860), Point(11.430, -22.860)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 48.260, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -43.180), Point(11.430, -43.180)])
+  layer("none") = Line(0.254, [Point(-12.700, -33.020), Point(-11.430, -33.020)])
+  layer("none") = Line(0.254, [Point(-12.700, 53.340), Point(-11.430, 53.340)])
+  layer("none") = Line(0.254, [Point(-12.700, -50.800), Point(-11.430, -50.800)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -25.400, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -5.080), Point(-11.430, -5.080)])
+  layer("none") = Line(0.254, [Point(12.700, 27.940), Point(11.430, 27.940)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 50.800, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -35.560), Point(11.430, -35.560)])
+  layer("none") = Line(0.254, [Point(-12.700, -22.860), Point(-11.430, -22.860)])
+  layer("none") = Line(0.254, [Point(12.700, 12.700), Point(11.430, 12.700)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 53.340, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -38.100), Point(-11.430, -38.100)])
+  layer("none") = Line(0.254, [Point(12.700, -58.420), Point(11.430, -58.420)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -33.020, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -60.960, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -10.160, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 63.500), Point(-11.430, 63.500)])
+  layer("none") = Line(0.254, [Point(-12.700, -25.400), Point(-11.430, -25.400)])
+  layer("none") = Line(0.254, [Point(12.700, 58.420), Point(11.430, 58.420)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -55.880, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 25.400), Point(11.430, 25.400)])
+  layer("none") = Line(0.254, [Point(-12.700, -60.960), Point(-11.430, -60.960)])
+  layer("none") = Line(0.254, [Point(12.700, -12.700), Point(11.430, -12.700)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -63.500, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 48.260, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 45.720), Point(11.430, 45.720)])
+  layer("none") = Line(0.254, [Point(-12.700, -43.180), Point(-11.430, -43.180)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 63.500, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -45.720, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -2.65451116132741e-14, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 60.960, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 7.620, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -48.260, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -22.860, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -30.480, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -17.780, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 15.240, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 33.020), Point(-11.430, 33.020)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 15.240, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -5.080, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 12.700, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -48.260), Point(-11.430, -48.260)])
+  layer("none") = Line(0.254, [Point(12.700, -38.100), Point(11.430, -38.100)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -60.960, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, 27.940), Point(-11.430, 27.940)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 25.400, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 33.020, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 35.560, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 5.080), Point(11.430, 5.080)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -12.700, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 50.800, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -48.260), Point(11.430, -48.260)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 40.640, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, -5.080), Point(11.430, -5.080)])
+  layer("none") = Line(0.254, [Point(12.700, -33.020), Point(11.430, -33.020)])
+  layer("none") = Line(0.254, [Point(12.700, 40.640), Point(11.430, 40.640)])
+  layer("none") = Line(0.254, [Point(12.700, 53.340), Point(11.430, 53.340)])
+  layer("none") = Line(0.254, [Point(12.700, 35.560), Point(11.430, 35.560)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -22.860, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 40.640, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -12.700), Point(-11.430, -12.700)])
+  layer("none") = Line(0.254, [Point(-12.700, -17.780), Point(-11.430, -17.780)])
+  layer("none") = Line(0.254, [Point(12.700, 55.880), Point(11.430, 55.880)])
+  layer("none") = Line(0.254, [Point(12.700, 22.860), Point(11.430, 22.860)])
+  layer("none") = Line(0.254, [Point(-12.700, 38.100), Point(-11.430, 38.100)])
+  layer("none") = Line(0.254, [Point(-12.700, 25.400), Point(-11.430, 25.400)])
+  layer("none") = Line(0.254, [Point(-12.700, 5.080), Point(-11.430, 5.080)])
+  layer("none") = Line(0.254, [Point(12.700, -7.620), Point(11.430, -7.620)])
+  layer("none") = Line(0.254, [Point(12.700, -10.160), Point(11.430, -10.160)])
+  layer("none") = Line(0.254, [Point(12.700, 17.780), Point(11.430, 17.780)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -38.100, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(12.700, 30.480), Point(11.430, 30.480)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 35.560, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -45.720), Point(-11.430, -45.720)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, -45.720, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 38.100, 0.635, 270.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -35.560), Point(-11.430, -35.560)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, 38.100, 0.635, 90.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(10.792, 27.940, 0.635, 270.244, 179.512)])
+  layer("none") = Polyline(0.254, [
+    Arc(-10.792, -25.400, 0.635, 90.244, 179.512)])
+  layer("none") = Line(0.254, [Point(-12.700, -30.480), Point(-11.430, -30.480)])
+  layer("none") = Line(0.254, [Point(-12.700, 50.800), Point(-11.430, 50.800)])
+
+public pcb-component component :
+  description = "40 Connector Receptacle, Female Blade Sockets Through Hole - Multi-Beam"
+  datasheet = ""
+  reference-prefix = "J"
+  manufacturer = "TE Connectivity"
+  mpn = "1-6450869-4"
+  name = "1-6450869-4"
+  pin-properties :
+    [pin:Ref | pads:Ref ... | side:Dir | electrical-type:String]
+    [LP1A | LP1A | Left  | "PowerIn"]
+    [LP1B | LP1B | Left  | "PowerIn"]
+    [LP1C | LP1C | Left  | "PowerIn"]
+    [LP1D | LP1D | Left  | "PowerIn"]
+    [LP2A | LP2A | Right | "PowerIn"]
+    [LP2B | LP2B | Right | "PowerIn"]
+    [LP2C | LP2C | Right | "PowerIn"]
+    [LP2D | LP2D | Right | "PowerIn"]
+    [P1A1 | P1A1 | Left  | "PowerIn"]
+    [P1A2 | P1A2 | Left  | "PowerIn"]
+    [P1B1 | P1B1 | Left  | "PowerIn"]
+    [P1B2 | P1B2 | Left  | "PowerIn"]
+    [P1C1 | P1C1 | Left  | "PowerIn"]
+    [P1C2 | P1C2 | Left  | "PowerIn"]
+    [P1D1 | P1D1 | Left  | "PowerIn"]
+    [P1D2 | P1D2 | Left  | "PowerIn"]
+    [P2A1 | P2A1 | Left  | "PowerIn"]
+    [P2A2 | P2A2 | Left  | "PowerIn"]
+    [P2B1 | P2B1 | Left  | "PowerIn"]
+    [P2B2 | P2B2 | Left  | "PowerIn"]
+    [P2C1 | P2C1 | Left  | "PowerIn"]
+    [P2C2 | P2C2 | Left  | "PowerIn"]
+    [P2D1 | P2D1 | Left  | "PowerIn"]
+    [P2D2 | P2D2 | Left  | "PowerIn"]
+    [P3A1 | P3A1 | Left  | "PowerIn"]
+    [P3A2 | P3A2 | Left  | "PowerIn"]
+    [P3B1 | P3B1 | Left  | "PowerIn"]
+    [P3B2 | P3B2 | Left  | "PowerIn"]
+    [P3C1 | P3C1 | Left  | "PowerIn"]
+    [P3C2 | P3C2 | Left  | "PowerIn"]
+    [P3D1 | P3D1 | Left  | "PowerIn"]
+    [P3D2 | P3D2 | Left  | "PowerIn"]
+    [P4A1 | P4A1 | Right | "PowerIn"]
+    [P4A2 | P4A2 | Right | "PowerIn"]
+    [P4B1 | P4B1 | Right | "PowerIn"]
+    [P4B2 | P4B2 | Right | "PowerIn"]
+    [P4C1 | P4C1 | Right | "PowerIn"]
+    [P4C2 | P4C2 | Right | "PowerIn"]
+    [P4D1 | P4D1 | Right | "PowerIn"]
+    [P4D2 | P4D2 | Right | "PowerIn"]
+    [P5A1 | P5A1 | Right | "PowerIn"]
+    [P5A2 | P5A2 | Right | "PowerIn"]
+    [P5B1 | P5B1 | Right | "PowerIn"]
+    [P5B2 | P5B2 | Right | "PowerIn"]
+    [P5C1 | P5C1 | Right | "PowerIn"]
+    [P5C2 | P5C2 | Right | "PowerIn"]
+    [P5D1 | P5D1 | Right | "PowerIn"]
+    [P5D2 | P5D2 | Right | "PowerIn"]
+    [P6A1 | P6A1 | Right | "PowerIn"]
+    [P6A2 | P6A2 | Right | "PowerIn"]
+    [P6B1 | P6B1 | Right | "PowerIn"]
+    [P6B2 | P6B2 | Right | "PowerIn"]
+    [P6C1 | P6C1 | Right | "PowerIn"]
+    [P6C2 | P6C2 | Right | "PowerIn"]
+    [P6D1 | P6D1 | Right | "PowerIn"]
+    [P6D2 | P6D2 | Right | "PowerIn"]
+    [SA1  | SA1  | Left  | "Passive"]
+    [SA2  | SA2  | Left  | "Passive"]
+    [SA3  | SA3  | Left  | "Passive"]
+    [SA4  | SA4  | Left  | "Passive"]
+    [SA5  | SA5  | Right | "Passive"]
+    [SA6  | SA6  | Right | "Passive"]
+    [SA7  | SA7  | Right | "Passive"]
+    [SA8  | SA8  | Right | "Passive"]
+    [SB1  | SB1  | Left  | "Passive"]
+    [SB2  | SB2  | Left  | "Passive"]
+    [SB3  | SB3  | Left  | "Passive"]
+    [SB4  | SB4  | Left  | "Passive"]
+    [SB5  | SB5  | Right | "Passive"]
+    [SB6  | SB6  | Right | "Passive"]
+    [SB7  | SB7  | Right | "Passive"]
+    [SB8  | SB8  | Right | "Passive"]
+    [SC1  | SC1  | Left  | "Passive"]
+    [SC2  | SC2  | Left  | "Passive"]
+    [SC3  | SC3  | Left  | "Passive"]
+    [SC4  | SC4  | Left  | "Passive"]
+    [SC5  | SC5  | Right | "Passive"]
+    [SC6  | SC6  | Right | "Passive"]
+    [SC7  | SC7  | Right | "Passive"]
+    [SC8  | SC8  | Right | "Passive"]
+    [SD1  | SD1  | Left  | "Passive"]
+    [SD2  | SD2  | Left  | "Passive"]
+    [SD3  | SD3  | Left  | "Passive"]
+    [SD4  | SD4  | Left  | "Passive"]
+    [SD5  | SD5  | Right | "Passive"]
+    [SD6  | SD6  | Right | "Passive"]
+    [SD7  | SD7  | Right | "Passive"]
+    [SD8  | SD8  | Right | "Passive"]
+
+  assign-landpattern(lp_TE_1-6450869-4-1)
+  assign-symbol(sym_TE_1-6450869-4)
+
+  property(self.Availability) = "In Stock"
+  property(self.Check_prices) = "https://www.snapeda.com/parts/1-6450869-4/TE+Connectivity/view-part/?ref=eda"
+  property(self.MANUFACTURER) = "TE Connectivity"
+  property(self.MAXIMUM_PACKAGE_HEIGHT) = "12.7mm"
+  property(self.MF) = "TE Connectivity AMP Connectors"
+  property(self.MP) = "1-6450869-4"
+  property(self.PARTREV) = "3"
+  property(self.Package) = "None"
+  property(self.Price) = "None"
+  property(self.Purchase-URL) = "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=7836151&manufacturer=TE Connectivity AMP Connectors&part_name=1-6450869-4&search_term=None"
+  property(self.SNAPEDA_PN) = "1-6450869-4"
+  property(self.STANDARD) = "Manufacturer Recommendations"
+  property(self.SnapEDA_Link) = "https://www.snapeda.com/parts/1-6450869-4/TE+Connectivity/view-part/?ref=snap"
+  property(self.Value) = "1-6450869-4"
+  property(self.rated-temperature) = min-max(-40.0, 125.0)
+
+; view(component)
+
+public pcb-module module :
+  pin P1
+  pin P2
+  pin LP1
+  pin LP2
+  pin P3
+  pin P4
+  pin P5
+  pin P6
+
+  public inst conn : components/TE_1-6450869-4/component
+  place(conn) at loc(0.0, 0.0) on Top
+  net (P1 conn.P1A1 conn.P1A2 conn.P1B1 conn.P1B2 conn.P1C1 conn.P1C2 conn.P1D1 conn.P1D2)
+  net (P2 conn.P2A1 conn.P2A2 conn.P2B1 conn.P2B2 conn.P2C1 conn.P2C2 conn.P2D1 conn.P2D2)
+  net (P3 conn.P3A1 conn.P3A2 conn.P3B1 conn.P3B2 conn.P3C1 conn.P3C2 conn.P3D1 conn.P3D2)
+  net (P4 conn.P4A1 conn.P4A2 conn.P4B1 conn.P4B2 conn.P4C1 conn.P4C2 conn.P4D1 conn.P4D2)
+  net (P5 conn.P5A1 conn.P5A2 conn.P5B1 conn.P5B2 conn.P5C1 conn.P5C2 conn.P5D1 conn.P5D2)
+  net (P6 conn.P6A1 conn.P6A2 conn.P6B1 conn.P6B2 conn.P6C1 conn.P6C2 conn.P6D1 conn.P6D2)
+
+  net (LP1 conn.LP1A conn.LP1B conn.LP1C conn.LP1D)
+  net (LP2 conn.LP2A conn.LP2B conn.LP2C conn.LP2D)

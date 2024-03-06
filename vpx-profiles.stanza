@@ -1,0 +1,534 @@
+#use-added-syntax(jitx)
+defpackage vpx-profiles :
+  import core
+  import collections
+  import jitx
+  import jitx/commands
+  import ocdb/utils/defaults
+  import ocdb/utils/checks
+  import ocdb/utils/landpatterns
+  import ocdb/utils/generator-utils
+  import ocdb/utils/generic-components
+  import ocdb/utils/bundles
+  import ocdb/utils/property-structs
+  import vpx-pin-maps
+  import vpx-supports
+
+public pcb-module SLT3-PAY-2U2U-14_2_17 (-- interface:InterfaceType = Backplane) : ; SLT3-PAY-2U2U-14.2.17
+  ; Data and Control Signals
+  ;  # of pipes, size of pipe(FP=4,TP=2,UTP=1)
+  port expansion-plane : ultra-thin-pipe[2]
+  port control-plane : ultra-thin-pipe[2]
+  port user-plane : gpio[48] ; not connected for now...
+  port utility : vpx-utility
+  port reserved : pin[2]
+  pin mp01-rx
+  pin mp01-tx
+  
+
+  val tx-properties = DigitalOutput(CMOSOutput(min-max(0.0, 0.5), min-max(2.5, 2.7) ) false, utility.vpx-power[0].vdd, utility.vpx-power[0].gnd)
+  val rx-properties = DigitalInput(typ(0.9), typ(2.2), utility.vpx-power[0].vdd, utility.vpx-power[0].gnd, 50.0e-6)
+
+  public inst slot : vpx-3u(interface = interface)
+  place(slot) at loc(0.0, 0.0, 0.0) on Top
+
+  ; P0 Utility Plane signals
+  net (utility slot.utility)
+
+  ; Slot Profile Defined Nets on row G of P1
+  net (reserved[0] slot.slot-profile-defined[0] )
+  net (reserved[1] slot.slot-profile-defined[3] )
+  net (mp01-tx slot.slot-profile-defined[1] )
+  net (mp01-rx slot.slot-profile-defined[2] )
+
+  ; connect 2U control-plane
+  for i in 0 to 2 do :
+    net (control-plane[i].rx slot.vpx-pairs[0][2 * i])
+    net (control-plane[i].tx slot.vpx-pairs[0][2 * i + 1])
+    property(get-base-pin(control-plane[i].rx.P, slot).digital-input  ) = rx-properties
+    property(get-base-pin(control-plane[i].rx.N, slot).digital-input  ) = rx-properties
+    property(get-base-pin(control-plane[i].tx.P, slot).digital-output ) = tx-properties
+    property(get-base-pin(control-plane[i].tx.N, slot).digital-output ) = tx-properties
+
+
+  ; connect 2U expansion plane
+  for i in 0 to 2 do :
+    net (expansion-plane[i].rx slot.vpx-pairs[0][2 * i + 28])
+    net (expansion-plane[i].tx slot.vpx-pairs[0][2 * i + 1 + 28])
+    property(get-base-pin(expansion-plane[i].rx.P, slot).digital-input  ) = rx-properties
+    property(get-base-pin(expansion-plane[i].rx.N, slot).digital-input  ) = rx-properties
+    property(get-base-pin(expansion-plane[i].tx.P, slot).digital-output ) = tx-properties
+    property(get-base-pin(expansion-plane[i].tx.N, slot).digital-output ) = tx-properties
+
+  for i in 2 to 28 do :
+    for p in ports(slot.vpx-pairs[0][i]) do :
+      supports gpio :
+        gpio.gpio => p
+
+  for i in 0 to 32 do :
+    for p in ports(slot.vpx-pairs[1][i]) do :
+      supports gpio :
+        gpio.gpio => p
+
+  for p in ports(slot.vpx-sig) do :
+    supports gpio :
+      gpio.gpio => p
+
+public pcb-module SLT3-PAY-1F1F2U1TU1T1U1T_14_2_16 (-- interface:InterfaceType = Backplane) :
+; 1 f -> fp 8 pair -> fat pipe 8 pair (4x Serial RapidIO, x4 PCIe, 10GBASE-KX4, 40GBASESR4 (40 Gbit Ethernet over fiber)
+; 1 f -> fp 8 pair
+; 2 u -> utp 2 pairs -> ultra thin pipe (1000BASE-KX Ethernet, 1x Serial RapidIO, x1 PCIe, and 10GBASE-SR)
+; 1 tu -> tutp 6 pairs -> triple ultra thin pipe 
+; 1 t -> tp 4 pairs -> thin pipe (1000BASE-T)
+; 1 u -> utp 2 pairs -> ultra thin pipe
+; 1 t -> tp 4 pairs -> thin pipe (1000BASE-T)
+  port data-plane-1f1 : fat-pipe
+  port expansion-plane-1f2 : fat-pipe
+  port control-plane-2u1 : ultra-thin-pipe[2]
+  port video-1tu1 : triple-ultra-thin-pipe
+  port usb-1t1 : thin-pipe
+  port storage-1u2 : ultra-thin-pipe
+  port control-plane-1t2 : thin-pipe
+  port utility : vpx-utility
+  port reserved : pin[2]
+  pin mp01-rx
+  pin mp01-tx
+
+  val tx-properties = DigitalOutput(CMOSOutput(min-max(0.0, 0.5), min-max(2.5, 2.7) ) false, utility.vpx-power[0].vdd, utility.vpx-power[0].gnd)
+  val rx-properties = DigitalInput(typ(0.9), typ(2.2), utility.vpx-power[0].vdd, utility.vpx-power[0].gnd, 50.0e-6)
+
+  public inst slot : vpx-3u(interface = interface aperture = true)
+  place(slot) at loc(0.0, 0.0, 0.0) on Top
+
+  ; P0 Utility Plane signals
+  net (utility slot.utility)
+
+  ; Slot Profile Defined Nets on row G of P1
+  net (reserved[0] slot.slot-profile-defined[0] )
+  net (reserved[1] slot.slot-profile-defined[3] )
+  net (mp01-tx slot.slot-profile-defined[1] )
+  net (mp01-rx slot.slot-profile-defined[2] )
+
+  ; connect data-plane
+  supports fat-pipe :
+    for (p in ports(fat-pipe), i in 0 to false) do :
+      val x = i / 2
+      p.P => slot.vpx-pairs[i * 2].P
+      p.N => slot.vpx-pairs[i * 2].N
+      if i < 4 :
+        property(p.P.digital-input  ) = rx-properties
+        property(p.N.digital-input  ) = rx-properties
+      else :
+        property(p.P.digital-output  ) = tx-properties
+        property(p.N.digital-output  ) = tx-properties
+    
+
+public pcb-module SLT3-TIM-4S16S1U2U1H-14_9_1_n (-- interface:InterfaceType = Backplane) :
+  port data-plane : (pipe(width = 4))[4]
+  port control-plane-tp : thin-pipe
+  port control-switch : pipe()
+  port utility : vpx-utility
+  port reserved : pin[2]
+  pin mp01-rx
+  pin mp01-tx
+
+  ; TEMPORARY HACK TO REMOVE LATER 
+  for p in pins(data-plane) do : 
+    supports gpio :
+      gpio.gpio => p
+
+ ; eval-when true :
+  val tx-properties = DigitalOutput(CMOSOutput(min-max(0.0, 0.5), min-max(2.5, 2.7) ) false, utility.vpx-power[0].vdd, utility.vpx-power[0].gnd)
+  val rx-properties = DigitalInput(typ(0.9), typ(2.2), utility.vpx-power[0].vdd, utility.vpx-power[0].gnd, 50.0e-6)
+
+  public inst slot : vpx-3u(interface = interface aperture = true)
+  place(slot) at loc(0.0, 0.0, 0.0) on Top
+
+  ; P0 Utility Plane signals
+  net (utility slot.utility)
+
+  ; Slot Profile Defined Nets on row G of P1
+  net (reserved[0] slot.slot-profile-defined[0] )
+  net (reserved[1] slot.slot-profile-defined[3] )
+  net (mp01-tx slot.slot-profile-defined[1] )
+  net (mp01-rx slot.slot-profile-defined[2] )
+  for fp-num in 0 to 4 do : ; iterate over 4 of 6 fat pipes
+    for fat-pipe-loc in 0 to 4 do :
+      val vpx-num = (fp-num * 8) + fat-pipe-loc * 2
+      if interface == DaughterCard :
+        net (data-plane[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num])
+        net (data-plane[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num + 1])
+        property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].P, slot).digital-input ) = rx-properties
+        property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].N, slot).digital-input ) = rx-properties
+        property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].P, slot).digital-output) = tx-properties
+        property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].N, slot).digital-output) = tx-properties
+      else :
+        net (data-plane[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num])
+        net (data-plane[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num + 1])
+        property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].P, slot).digital-input ) = rx-properties
+        property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].N, slot).digital-input ) = rx-properties
+        property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].P, slot).digital-output) = tx-properties
+        property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].N, slot).digital-output) = tx-properties
+
+  ; Control Plane Thin pipes
+  for i in 0 to 2 do :
+    net (control-plane-tp.rx[i].N slot.vpx-sig[i * 4 + 0])
+    net (control-plane-tp.rx[i].P slot.vpx-sig[i * 4 + 1])
+    net (control-plane-tp.tx[i].N slot.vpx-sig[i * 4 + 2])
+    net (control-plane-tp.tx[i].P slot.vpx-sig[i * 4 + 3])
+    property(get-base-pin(control-plane-tp.rx[i].N, slot).digital-input )  = rx-properties
+    property(get-base-pin(control-plane-tp.rx[i].P, slot).digital-input )  = rx-properties
+    property(get-base-pin(control-plane-tp.tx[i].N, slot).digital-output)  = tx-properties
+    property(get-base-pin(control-plane-tp.tx[i].P, slot).digital-output)  = tx-properties
+
+public pcb-module SLT3-SWH-6F8U-14_4_15 (-- interface:InterfaceType = DaughterCard): ; SLT3-SWH-6F8U-14.4.15
+  ; Data and Control Signals
+  ;  # of pipes, size of pipe(FP=4,TP=2,UTP=1)
+  port data-plane : (pipe(width = 4))[6]
+  port control-plane-utp: pipe()[8]
+  port control-plane-tp : thin-pipe
+  port control-switch : pipe()
+  port utility : vpx-utility
+  port reserved : pin[2]
+  pin mp01-rx
+  pin mp01-tx
+
+ ; eval-when true :
+  val tx-properties = DigitalOutput(CMOSOutput(min-max(0.0, 0.5), min-max(2.5, 2.7) ) false, utility.vpx-power[0].vdd, utility.vpx-power[0].gnd)
+  val rx-properties = DigitalInput(typ(0.9), typ(2.2), utility.vpx-power[0].vdd, utility.vpx-power[0].gnd, 50.0e-6)
+
+  public inst slot : vpx-3u(interface = interface)
+  place(slot) at loc(0.0, 0.0, 0.0) on Top
+
+  ; P0 Utility Plane signals
+  net (utility slot.utility)
+
+  ; Slot Profile Defined Nets on row G of P1
+  net (reserved[0] slot.slot-profile-defined[0] )
+  net (reserved[1] slot.slot-profile-defined[3] )
+  net (mp01-tx slot.slot-profile-defined[1] )
+  net (mp01-rx slot.slot-profile-defined[2] )
+  for fp-num in 0 to 4 do : ; iterate over 4 of 6 fat pipes
+    for fat-pipe-loc in 0 to 4 do :
+      val vpx-num = (fp-num * 8) + fat-pipe-loc * 2
+      if interface == DaughterCard :
+        net (data-plane[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num])
+        net (data-plane[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num + 1])
+      else :
+        net (data-plane[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num])
+        net (data-plane[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num + 1])
+      property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].P, slot).digital-input)  = rx-properties
+      property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].N, slot).digital-input)  = rx-properties
+      property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].P, slot).digital-output) = tx-properties
+      property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].N, slot).digital-output) = tx-properties
+
+  for fp-num in 4 to 6 do : ; iterate over last 2 fat pipes (on other connector)
+    for fat-pipe-loc in 0 to 4 do :
+      val vpx-num = ((fp-num - 4) * 8) + fat-pipe-loc * 2
+      if interface == DaughterCard :
+        net (data-plane[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num])
+        net (data-plane[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num + 1])
+      else :
+        net (data-plane[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num])
+        net (data-plane[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num + 1])
+      property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].P, slot).digital-input)  = rx-properties
+      property(get-base-pin(data-plane[fp-num].rx[fat-pipe-loc].N, slot).digital-input)  = rx-properties
+      property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].P, slot).digital-output) = tx-properties
+      property(get-base-pin(data-plane[fp-num].tx[fat-pipe-loc].N, slot).digital-output) = tx-properties
+    ;   println("pair 1 vpxnum %_" % [vpx-num])
+    
+  ; Control Plane Ultra thin pipes
+  for utp-num in 0 to 5 do :
+    val grid-pos = 27 - utp-num * 2
+    if interface == DaughterCard :
+      net (control-plane-utp[utp-num].tx slot.vpx-pairs[1][grid-pos])
+      net (control-plane-utp[utp-num].rx slot.vpx-pairs[1][grid-pos - 1])
+    else :
+      net (control-plane-utp[utp-num].rx slot.vpx-pairs[1][grid-pos])
+      net (control-plane-utp[utp-num].tx slot.vpx-pairs[1][grid-pos - 1])
+    property(get-base-pin(control-plane-utp[utp-num].rx.P, slot).digital-input)  = rx-properties
+    property(get-base-pin(control-plane-utp[utp-num].rx.N, slot).digital-input)  = rx-properties
+    property(get-base-pin(control-plane-utp[utp-num].tx.P, slot).digital-output) = tx-properties
+    property(get-base-pin(control-plane-utp[utp-num].tx.N, slot).digital-output) = tx-properties
+    ; println("pair 1 utp-num %_ grid-pos %_" % [utp-num  grid-pos])
+  for utp-num in 5 to 8 do :
+    val grid-pos = 41 - utp-num * 2
+    if interface == DaughterCard :
+      net (control-plane-utp[utp-num].tx slot.vpx-pairs[1][grid-pos])
+      net (control-plane-utp[utp-num].rx slot.vpx-pairs[1][grid-pos - 1])
+    else :
+      net (control-plane-utp[utp-num].rx slot.vpx-pairs[1][grid-pos])
+      net (control-plane-utp[utp-num].tx slot.vpx-pairs[1][grid-pos - 1])
+    property(get-base-pin(control-plane-utp[utp-num].rx.P, slot).digital-input)  = rx-properties
+    property(get-base-pin(control-plane-utp[utp-num].rx.N, slot).digital-input)  = rx-properties
+    property(get-base-pin(control-plane-utp[utp-num].tx.P, slot).digital-output) = tx-properties
+    property(get-base-pin(control-plane-utp[utp-num].tx.N, slot).digital-output) = tx-properties
+
+
+  ; Control Plane Thin pipes
+  for (p in ports(control-plane-tp), i in 0 to 2) do :
+    net (p[i].P slot.vpx-sig[i * 2])
+    net (p[i].N slot.vpx-sig[1 + (i * 2)])
+
+  ; Control Switch
+  if interface == DaughterCard :
+    net (control-switch.rx slot.vpx-pairs[1][16])
+    net (control-switch.tx slot.vpx-pairs[1][17])
+  else :
+    net (control-switch.tx slot.vpx-pairs[1][16])
+    net (control-switch.rx slot.vpx-pairs[1][17])
+  property(get-base-pin(control-switch.rx.P, slot).digital-input)  = rx-properties
+  property(get-base-pin(control-switch.rx.N, slot).digital-input)  = rx-properties
+  property(get-base-pin(control-switch.tx.P, slot).digital-output) = tx-properties
+  property(get-base-pin(control-switch.tx.N, slot).digital-output) = tx-properties
+
+  for i in 0 to 6 do :
+    supports fat-pipe :
+        for j in 0 to 4 do :
+          fat-pipe.rx[j].P => data-plane[i].rx[j].P
+          fat-pipe.rx[j].N => data-plane[i].rx[j].N
+          fat-pipe.tx[j].P => data-plane[i].tx[j].P
+          fat-pipe.tx[j].N => data-plane[i].tx[j].N
+          property(fat-pipe.rx[j].P.digital-input)  = rx-properties
+          property(fat-pipe.rx[j].N.digital-input)  = rx-properties
+          property(fat-pipe.tx[j].P.digital-output) = tx-properties
+          property(fat-pipe.tx[j].N.digital-output) = tx-properties
+
+  for i in 0 to 8 do :
+    supports ultra-thin-pipe :
+      ultra-thin-pipe.rx.P => control-plane-utp[i].rx.P
+      ultra-thin-pipe.rx.N => control-plane-utp[i].rx.N
+      ultra-thin-pipe.tx.P => control-plane-utp[i].tx.P
+      ultra-thin-pipe.tx.N => control-plane-utp[i].tx.N
+      property(ultra-thin-pipe.rx.P.digital-input)  = rx-properties
+      property(ultra-thin-pipe.rx.N.digital-input)  = rx-properties
+      property(ultra-thin-pipe.tx.P.digital-output) = tx-properties
+      property(ultra-thin-pipe.tx.N.digital-output) = tx-properties
+
+  supports thin-pipe :
+    for i in 0 to 2 do :
+      thin-pipe.rx[i].P =>  slot.vpx-sig[4 * i    ]
+      thin-pipe.rx[i].N =>  slot.vpx-sig[4 * i + 1]
+      thin-pipe.tx[i].P =>  slot.vpx-sig[4 * i + 2]
+      thin-pipe.tx[i].N =>  slot.vpx-sig[4 * i + 3]
+      property(thin-pipe.rx[i].P.digital-input)  = rx-properties
+      property(thin-pipe.rx[i].N.digital-input)  = rx-properties
+      property(thin-pipe.tx[i].P.digital-output) = tx-properties
+      property(thin-pipe.tx[i].N.digital-output) = tx-properties
+
+public pcb-module SLT3-SWH-6F1U7U-14_4_14 (-- interface:InterfaceType = Backplane): ; SLT3-SWH-6F8U-14.4.15
+  ; Data and Control Signals
+  ;  # of pipes, size of pipe(FP=4,TP=2,UTP=1)
+  port data-plane-DP : fat-pipe[5]
+  port data-plane-DS : fat-pipe
+  port unused-plane: ultra-thin-pipe
+  port control-plane-CP : ultra-thin-pipe[6]
+  port control-plane-CS : ultra-thin-pipe
+  port utility : vpx-utility
+  port reserved : pin[2]
+  pin mp01-rx
+  pin mp01-tx
+
+  public inst slot : vpx-3u(interface = interface)
+  place(slot) at loc(0.0, 0.0, 0.0) on Top
+
+  ; P0 Utility Plane signals
+  net (utility slot.utility)
+
+  ; Slot Profile Defined Nets on row G of P1
+  net (reserved[0] slot.slot-profile-defined[0] )
+  net (reserved[1] slot.slot-profile-defined[3] )
+  net (mp01-tx slot.slot-profile-defined[1] )
+  net (mp01-rx slot.slot-profile-defined[2] )
+
+  ; THIS MAPPING NEEDS TO BE FIXED - BG
+  for fp-num in 0 to 5 do : ; iterate over 5 fat pipes
+    for fat-pipe-loc in 0 to 4 do :
+      val vpx-num = (fp-num * 4) + fat-pipe-loc * 2
+      if interface == DaughterCard :
+        net (data-plane-DP[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num])
+        net (data-plane-DP[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num + 1])
+      else :
+        net (data-plane-DP[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num])
+        net (data-plane-DP[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[0][vpx-num + 1])
+
+  ; for fp-num in 4 to 6 do : ; iterate over last 2 fat pipes (on other connector)
+  ;   for fat-pipe-loc in 0 to 4 do :
+  ;     val vpx-num = ((fp-num - 4) * 8) + fat-pipe-loc * 2
+  ;     if interface == DaughterCard :
+  ;       net (data-plane-DP[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num])
+  ;       net (data-plane-DP[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num + 1])
+  ;     else :
+  ;       net (data-plane-DP[fp-num].tx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num])
+  ;       net (data-plane-DP[fp-num].rx[fat-pipe-loc] slot.vpx-pairs[1][vpx-num + 1])
+    ;   println("pair 1 vpxnum %_" % [vpx-num])
+    
+  ; Control Plane Ultra thin pipes
+  for utp-num in 0 to 6 do :
+    val grid-pos = 27 - utp-num * 2
+    if interface == DaughterCard :
+      net (control-plane-CP[utp-num].tx slot.vpx-pairs[1][grid-pos])
+      net (control-plane-CP[utp-num].rx slot.vpx-pairs[1][grid-pos - 1])
+    else :
+      net (control-plane-CP[utp-num].rx slot.vpx-pairs[1][grid-pos])
+      net (control-plane-CP[utp-num].tx slot.vpx-pairs[1][grid-pos - 1])
+    ; println("pair 1 utp-num %_ grid-pos %_" % [utp-num  grid-pos])
+  ; for utp-num in 5 to 8 do :
+  ;   val grid-pos = 41 - utp-num * 2
+  ;   if interface == DaughterCard :
+  ;     net (control-plane-utp[utp-num].tx slot.vpx-pairs[1][grid-pos])
+  ;     net (control-plane-utp[utp-num].rx slot.vpx-pairs[1][grid-pos - 1])
+  ;   else :
+  ;     net (control-plane-utp[utp-num].rx slot.vpx-pairs[1][grid-pos])
+  ;     net (control-plane-utp[utp-num].tx slot.vpx-pairs[1][grid-pos - 1])
+
+
+  ; Control Plane Thin pipes
+  for (p in ports(control-plane-CS), i in 0 to 4) do :
+    net (p.P slot.vpx-sig[i * 2])
+    net (p.N slot.vpx-sig[1 + (i * 2)])
+
+  ; Control Switch
+  if interface == DaughterCard :
+    net (control-plane-CS.rx slot.vpx-pairs[1][16])
+    net (control-plane-CS.tx slot.vpx-pairs[1][17])
+  else :
+    net (control-plane-CS.tx slot.vpx-pairs[1][16])
+    net (control-plane-CS.rx slot.vpx-pairs[1][17])
+
+  for i in 0 to 5 do :
+    supports fat-pipe :
+        for j in 0 to 4 do :
+          fat-pipe.rx[j].P => data-plane-DP[i].rx[j].P
+          fat-pipe.rx[j].N => data-plane-DP[i].rx[j].N
+          fat-pipe.tx[j].P => data-plane-DP[i].tx[j].P
+          fat-pipe.tx[j].N => data-plane-DP[i].tx[j].N
+
+  for i in 0 to 6 do :
+    supports ultra-thin-pipe :
+      ultra-thin-pipe.rx.P => control-plane-CP[i].rx.P
+      ultra-thin-pipe.rx.N => control-plane-CP[i].rx.N
+      ultra-thin-pipe.tx.P => control-plane-CP[i].tx.P
+      ultra-thin-pipe.tx.N => control-plane-CP[i].tx.N
+  
+  supports ultra-thin-pipe :
+    ultra-thin-pipe.rx.P => slot.vpx-sig[0]
+    ultra-thin-pipe.rx.N => slot.vpx-sig[1]
+    ultra-thin-pipe.tx.P => slot.vpx-sig[2]
+    ultra-thin-pipe.tx.N => slot.vpx-sig[3]
+
+  ; eval-when true :
+  val tx-properties = DigitalOutput(CMOSOutput(min-max(0.0, 0.5), min-max(2.5, 2.7) ) false, utility.vpx-power[0].vdd, utility.vpx-power[0].gnd)
+  val rx-properties = DigitalInput(typ(0.9), typ(2.2), utility.vpx-power[0].vdd, utility.vpx-power[0].gnd, 50.0e-6)
+  property(get-base-pin(control-plane-CS.rx.P, slot).digital-input)  = rx-properties
+  property(get-base-pin(control-plane-CS.rx.N, slot).digital-input)  = rx-properties
+  property(get-base-pin(control-plane-CS.tx.P, slot).digital-output) = tx-properties
+  property(get-base-pin(control-plane-CS.tx.N, slot).digital-output) = tx-properties
+
+  for i in 0 to 5 do :
+    for j in 0 to 4 do :
+      property(get-base-pin(data-plane-DP[i].rx[j].P, slot).digital-input)  = rx-properties
+      property(get-base-pin(data-plane-DP[i].rx[j].N, slot).digital-input)  = rx-properties
+      property(get-base-pin(data-plane-DP[i].tx[j].P, slot).digital-output) = tx-properties
+      property(get-base-pin(data-plane-DP[i].tx[j].N, slot).digital-output) = tx-properties
+
+  for i in 0 to 6 do :
+    property(get-base-pin(control-plane-CP[i].rx.P, slot).digital-input)  = rx-properties
+    property(get-base-pin(control-plane-CP[i].rx.N, slot).digital-input)  = rx-properties
+    property(get-base-pin(control-plane-CP[i].tx.P, slot).digital-output) = tx-properties
+    property(get-base-pin(control-plane-CP[i].tx.N, slot).digital-output) = tx-properties
+
+public pcb-module MOD3-SWH-6F8U (interface:InterfaceType):
+  port utility : vpx-utility
+  port data-plane : ethernet-10GBASE-KR[24]
+  port control-plane : (pci-e(lanes = 1))[8]
+  public inst slot-profile : SLT3-SWH-6F8U-14_4_15(interface = interface)
+  place(slot-profile) at loc(0.0, 0.0, 0.0) on Top
+  net (utility, slot-profile.utility)
+  ; connect data to Ethernet
+  for fp-num in 0 to 6 do : ; iterate over 6 fat pipes
+    for i in 0 to 4 do :     ; iterate over ethernet pipe (2)
+      net (data-plane[i + fp-num * 4].tx slot-profile.data-plane[fp-num].tx[i])
+      net (data-plane[i + fp-num * 4].rx slot-profile.data-plane[fp-num].rx[i])
+  ; connect control to PCIe
+  ; net (slot-profile.CS-UTP control.cs)
+  for i in 0 to 7 do :
+    net (control-plane[i].rx slot-profile.control-plane-utp[i].rx )
+    net (control-plane[i].tx slot-profile.control-plane-utp[i].tx )
+  net (control-plane[7].rx slot-profile.control-switch.rx )
+  net (control-plane[7].tx slot-profile.control-switch.tx )
+  
+  ; eval-when true :
+  val tx-properties = DigitalOutput(CMOSOutput(min-max(0.0, 0.5), min-max(2.5, 2.7) ) false, utility.vpx-power[0].vdd, utility.vpx-power[0].gnd)
+  val rx-properties = DigitalInput(typ(0.9), typ(2.2), utility.vpx-power[0].vdd, utility.vpx-power[0].gnd, 50.0e-6)
+
+  defn get-base-pin (p:JITXObject) -> JITXObject:
+    connected-pins(p, component-instances(slot-profile.slot))[0]
+
+  for i in 0 to 24 do :
+    property(get-base-pin(data-plane[i].rx.P).digital-input) = rx-properties
+    property(get-base-pin(data-plane[i].tx.P).digital-output) = tx-properties
+  for i in 0 to 8 do :
+    property(get-base-pin(control-plane[i].rx.P).digital-input) = rx-properties
+    property(get-base-pin(control-plane[i].tx.P).digital-input) = tx-properties
+
+public defn custom-card (interface:InterfaceType) :
+  MOD3-SWH-6F8U(interface)
+
+public pcb-module px-power-connector :
+  public inst P0 : components/TE_1-6450869-4/module
+  place(P0) at loc(0.0, 0.0) on Top
+
+  net (P0.P4 P0.P5) ; connect POWER_RETURN together at this level for consistency
+  net (P0.conn.SA4 P0.conn.SB4 P0.conn.SC4 P0.conn.SD4) ; ditto
+
+  supports px-power :
+    px-power.DC_IN.vdd     => P0.P2
+    px-power.DC_IN.gnd     => P0.P1
+    px-power.FAIL*         => P0.conn.SB2
+    px-power.INHIBIT*      => P0.conn.SC2
+    px-power.ENABLE*       => P0.conn.SD2
+    px-power.P+12Vaux      => P0.conn.SB3
+    px-power.P+3p3Vaux     => P0.conn.SA4 ; only refer to one of the 4 options, but all connected
+    px-power.*GA0          => P0.conn.SA5
+    px-power.*GA1          => P0.conn.SB5
+    px-power.SM.scl        => P0.conn.SC5
+    px-power.SM.sda        => P0.conn.SD5
+    px-power.P-12Vaux      => P0.conn.SC6
+    px-power.SYS_RESET*    => P0.conn.SD6
+    px-power.SIGNAL_RETURN => P0.conn.SD7
+    px-power.P+12Vsense    => P0.conn.SA8
+    px-power.P+3p3Vsense   => P0.conn.SB8
+    px-power.P+5Vsense     => P0.conn.SC8
+    px-power.SENSE_RETURN  => P0.conn.SD8
+    px-power.P+5Vmain      => P0.P3
+    px-power.POWER_RETURN  => P0.P4 ; only need to refer to one of the two meta-pins
+    px-power.P+3p3Vmain    => P0.LP2
+    px-power.P+12Vmain     => P0.P6
+
+  no-connect(P0.conn.SA1)
+  no-connect(P0.conn.SB1)
+  no-connect(P0.conn.SC1)
+  no-connect(P0.conn.SD1)
+  no-connect(P0.conn.SA2)
+  no-connect(P0.conn.SA3)
+  no-connect(P0.conn.SC3)
+  no-connect(P0.conn.SD3)
+  no-connect(P0.conn.SA6)
+  no-connect(P0.conn.SB6)
+  no-connect(P0.conn.SA7)
+  no-connect(P0.conn.SB7)
+  no-connect(P0.conn.SC7)
+
+  property(P0.P4.voltage) = typ(0.0)
+  property(P0.P5.voltage) = typ(0.0)
+  property(P0.P1.voltage) = typ(0.0)
+
+  property(P0.conn.P6A1.power-supply-pin) = PowerSupplyPin(min-max(11.9, 12.1), 40.0)
+  property(P0.P6.voltage) = min-max(11.9, 12.1)
+  property(P0.conn.LP2A.power-supply-pin) = PowerSupplyPin(min-typ-max(3.25, 3.30, 3.45), 30.0)
+  property(P0.LP2.voltage) = min-typ-max(3.25, 3.30, 3.45)
+  property(P0.conn.P3A1.power-supply-pin) = PowerSupplyPin(min-typ-max(4.93, 5.00, 5.07), 20.0)
+  property(P0.P3.voltage) = min-typ-max(4.93, 5.00, 5.07)
+  property(P0.conn.P2A1.power-pin) = PowerPin(min-max(180.0, 420.0))
+  property(P0.conn.P2A1.voltage) = min-max(180.0, 420.0)

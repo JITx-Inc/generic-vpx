@@ -1,0 +1,2148 @@
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-1.slot.P0 has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037098)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.SWH-1.slot.P0 has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1057097/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-1.slot.P[0] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037095)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.SWH-1.slot.P[0] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1057162/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-1.slot.P[1] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037095)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.SWH-1.slot.P[1] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1057282/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-1.slot.key[0] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-1.slot.key[1] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-2.slot.P0 has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037098)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.SWH-2.slot.P0 has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1058570/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-2.slot.P[0] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037095)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.SWH-2.slot.P[0] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1058635/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-2.slot.P[1] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037095)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.SWH-2.slot.P[1] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1058755/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-2.slot.key[0] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.SWH-2.slot.key[1] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[0].slot.P0 has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037089)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.IO[0].slot.P0 has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1059929/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[0].slot.P[0] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037092)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.IO[0].slot.P[0] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1059994/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[0].slot.P[1] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037092)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.IO[0].slot.P[1] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1060114/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[0].slot.key[0] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[0].slot.key[1] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[1].slot.P0 has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037089)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.IO[1].slot.P0 has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1061218/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[1].slot.P[0] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037092)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.IO[1].slot.P[0] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1061283/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[1].slot.P[1] has a property for rated-temperature of Toleranced(-55.0 <= 25.0 <= 105.0)C")
+    (locators = D1037092)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "backplane.IO[1].slot.P[1] has a rated temperature Toleranced(-55.0 <= 25.0 <= 105.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1061403/D1037127(relative))
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[1].slot.key[0] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "backplane.IO[1].slot.key[1] has a property for rated-temperature of falseC")
+    (locators = D1038692)
+
+open-components-database/utils/checks.stanza:64.6: Check 'rated-temperature' passed.
+  Defined at open-components-database/utils/checks.stanza:91.0.
+  open-components-database/utils/checks.stanza:95.2: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks (Data)")
+    (subcheck-description = "Check the rated-temperature of component versus the design constraints")
+    (message = "P1.P0.conn has a property for rated-temperature of Toleranced(-40.0 <= 42.5 <= 125.0)C")
+    (locators = D1037117)
+  open-components-database/utils/checks.stanza:108.4: Assertion passed:
+    (name = "Rated temperature check")
+    (description = "Check rated temperatures for components versus design constraints")
+    (category = "Component Checks")
+    (subcheck-description = "Check the rated-temperature of a component against the operating temperature of the design.")
+    (message = "P1.P0.conn has a rated temperature Toleranced(-40.0 <= 42.5 <= 125.0) containing the operating temperature Toleranced(0.0 <= 12.5 <= 25.0)")
+    (locators = L1067201/D1037127(relative))
+
+open-components-database/utils/pin-checks/power-pin-checks.stanza:15.4: Check 'power-pin' passed.
+  Defined at open-components-database/utils/pin-checks/power-pin-checks.stanza:17.0.
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:20.2: Assertion passed:
+    (name = "P1.P0.conn.P2A1")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks (Data)")
+    (subcheck-description = "Verify the power pin has the correct PowerPin property attached")
+    (message = "Pin P1.P0.conn.P2A1 has the correct PowerPin property attached")
+    (locators = L1067218/D1037127(relative))
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:33.2: Assertion passed:
+    (name = "P1.P0.conn.P2A1")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks (Data)")
+    (subcheck-description = "Verify the power pin has a correct voltage property")
+    (message = "Pin P1.P0.conn.P2A1 has a voltage property of Toleranced(180.0 <= 300.0 <= 420.0)V")
+    (locators = L1067218/D1037127(relative))
+  open-components-database/utils/pin-checks/power-pin-checks.stanza:47.2: Assertion passed:
+    (name = "P1.P0.conn.P2A1")
+    (description = "Check voltage on power pins")
+    (category = "Power Pin Checks")
+    (subcheck-description = "Check the power pin\'s voltage property is within the design specification")
+    (message = "voltage Toleranced(180.0 <= 300.0 <= 420.0)V on pin P1.P0.conn.P2A1 is within the recommended operating range Toleranced(180.0 <= 300.0 <= 420.0)V")
+    (locators = L1067218/D1037127(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104520/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104522/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104524/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104526/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104528/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104530/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104532/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].D[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].D[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104534/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104537/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104538/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104539/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104540/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104541/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104542/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104543/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104544/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104545/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104546/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104547/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104548/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104549/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104550/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104551/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].E[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].E[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104552/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104555/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104557/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104559/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104561/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104563/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104565/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104567/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[0].F[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[0].F[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104569/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].A[5], backplane.SWH-2.slot.P[1].D[1]")
+    (description = "backplane.SWH-1.slot.P[1].A[5], backplane.SWH-2.slot.P[1].D[1] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].A[5] and backplane.SWH-2.slot.P[1].D[1] grounds are connected together")
+    (locators = L1104593/D1103824(relative), L1106113/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].A[5], backplane.SWH-2.slot.P[1].D[1]")
+    (description = "backplane.SWH-1.slot.P[1].A[5], backplane.SWH-2.slot.P[1].D[1] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].D[1]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].A[5]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104593/D1103824(relative), L1106113/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].A[5], backplane.SWH-2.slot.P[1].D[1]")
+    (description = "backplane.SWH-1.slot.P[1].A[5], backplane.SWH-2.slot.P[1].D[1] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].D[1]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].A[5]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104593/D1103824(relative), L1106113/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106113/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].A[7], backplane.SWH-2.slot.P[1].D[3]")
+    (description = "backplane.SWH-1.slot.P[1].A[7], backplane.SWH-2.slot.P[1].D[3] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].A[7] and backplane.SWH-2.slot.P[1].D[3] grounds are connected together")
+    (locators = L1104595/D1103824(relative), L1106115/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].A[7], backplane.SWH-2.slot.P[1].D[3]")
+    (description = "backplane.SWH-1.slot.P[1].A[7], backplane.SWH-2.slot.P[1].D[3] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].D[3]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].A[7]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104595/D1103824(relative), L1106115/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].A[7], backplane.SWH-2.slot.P[1].D[3]")
+    (description = "backplane.SWH-1.slot.P[1].A[7], backplane.SWH-2.slot.P[1].D[3] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].D[3]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].A[7]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104595/D1103824(relative), L1106115/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106115/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[5], backplane.SWH-2.slot.P[1].E[1]")
+    (description = "backplane.SWH-1.slot.P[1].B[5], backplane.SWH-2.slot.P[1].E[1] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].B[5] and backplane.SWH-2.slot.P[1].E[1] grounds are connected together")
+    (locators = L1104610/D1103824(relative), L1106130/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[5], backplane.SWH-2.slot.P[1].E[1]")
+    (description = "backplane.SWH-1.slot.P[1].B[5], backplane.SWH-2.slot.P[1].E[1] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].E[1]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].B[5]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104610/D1103824(relative), L1106130/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[5], backplane.SWH-2.slot.P[1].E[1]")
+    (description = "backplane.SWH-1.slot.P[1].B[5], backplane.SWH-2.slot.P[1].E[1] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].E[1]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].B[5]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104610/D1103824(relative), L1106130/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106130/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[6], backplane.SWH-2.slot.P[1].E[2]")
+    (description = "backplane.SWH-1.slot.P[1].B[6], backplane.SWH-2.slot.P[1].E[2] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].B[6] and backplane.SWH-2.slot.P[1].E[2] grounds are connected together")
+    (locators = L1104611/D1103824(relative), L1106131/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[6], backplane.SWH-2.slot.P[1].E[2]")
+    (description = "backplane.SWH-1.slot.P[1].B[6], backplane.SWH-2.slot.P[1].E[2] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].E[2]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].B[6]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104611/D1103824(relative), L1106131/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[6], backplane.SWH-2.slot.P[1].E[2]")
+    (description = "backplane.SWH-1.slot.P[1].B[6], backplane.SWH-2.slot.P[1].E[2] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].E[2]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].B[6]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104611/D1103824(relative), L1106131/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106131/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[7], backplane.SWH-2.slot.P[1].E[3]")
+    (description = "backplane.SWH-1.slot.P[1].B[7], backplane.SWH-2.slot.P[1].E[3] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].B[7] and backplane.SWH-2.slot.P[1].E[3] grounds are connected together")
+    (locators = L1104612/D1103824(relative), L1106132/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[7], backplane.SWH-2.slot.P[1].E[3]")
+    (description = "backplane.SWH-1.slot.P[1].B[7], backplane.SWH-2.slot.P[1].E[3] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].E[3]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].B[7]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104612/D1103824(relative), L1106132/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[7], backplane.SWH-2.slot.P[1].E[3]")
+    (description = "backplane.SWH-1.slot.P[1].B[7], backplane.SWH-2.slot.P[1].E[3] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].E[3]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].B[7]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104612/D1103824(relative), L1106132/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106132/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[8], backplane.SWH-2.slot.P[1].E[4]")
+    (description = "backplane.SWH-1.slot.P[1].B[8], backplane.SWH-2.slot.P[1].E[4] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].B[8] and backplane.SWH-2.slot.P[1].E[4] grounds are connected together")
+    (locators = L1104613/D1103824(relative), L1106133/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[8], backplane.SWH-2.slot.P[1].E[4]")
+    (description = "backplane.SWH-1.slot.P[1].B[8], backplane.SWH-2.slot.P[1].E[4] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].E[4]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].B[8]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104613/D1103824(relative), L1106133/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].B[8], backplane.SWH-2.slot.P[1].E[4]")
+    (description = "backplane.SWH-1.slot.P[1].B[8], backplane.SWH-2.slot.P[1].E[4] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].E[4]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].B[8]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104613/D1103824(relative), L1106133/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106133/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].C[6], backplane.SWH-2.slot.P[1].F[2]")
+    (description = "backplane.SWH-1.slot.P[1].C[6], backplane.SWH-2.slot.P[1].F[2] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].C[6] and backplane.SWH-2.slot.P[1].F[2] grounds are connected together")
+    (locators = L1104628/D1103824(relative), L1106148/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].C[6], backplane.SWH-2.slot.P[1].F[2]")
+    (description = "backplane.SWH-1.slot.P[1].C[6], backplane.SWH-2.slot.P[1].F[2] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].F[2]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].C[6]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104628/D1103824(relative), L1106148/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].C[6], backplane.SWH-2.slot.P[1].F[2]")
+    (description = "backplane.SWH-1.slot.P[1].C[6], backplane.SWH-2.slot.P[1].F[2] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].F[2]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].C[6]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104628/D1103824(relative), L1106148/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106148/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].C[8], backplane.SWH-2.slot.P[1].F[4]")
+    (description = "backplane.SWH-1.slot.P[1].C[8], backplane.SWH-2.slot.P[1].F[4] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-1.slot.P[1].C[8] and backplane.SWH-2.slot.P[1].F[4] grounds are connected together")
+    (locators = L1104630/D1103824(relative), L1106150/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].C[8], backplane.SWH-2.slot.P[1].F[4]")
+    (description = "backplane.SWH-1.slot.P[1].C[8], backplane.SWH-2.slot.P[1].F[4] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-2.slot.P[1].F[4]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-1.slot.P[1].C[8]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104630/D1103824(relative), L1106150/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].C[8], backplane.SWH-2.slot.P[1].F[4]")
+    (description = "backplane.SWH-1.slot.P[1].C[8], backplane.SWH-2.slot.P[1].F[4] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-2.slot.P[1].F[4]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-1.slot.P[1].C[8]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1104630/D1103824(relative), L1106150/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106150/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104640/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104642/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].A[1], backplane.SWH-1.slot.P[1].D[5]")
+    (description = "backplane.SWH-2.slot.P[1].A[1], backplane.SWH-1.slot.P[1].D[5] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].A[1] and backplane.SWH-1.slot.P[1].D[5] grounds are connected together")
+    (locators = L1106062/D1103824(relative), L1104644/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].A[1], backplane.SWH-1.slot.P[1].D[5]")
+    (description = "backplane.SWH-2.slot.P[1].A[1], backplane.SWH-1.slot.P[1].D[5] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].D[5]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].A[1]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106062/D1103824(relative), L1104644/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].A[1], backplane.SWH-1.slot.P[1].D[5]")
+    (description = "backplane.SWH-2.slot.P[1].A[1], backplane.SWH-1.slot.P[1].D[5] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].D[5]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].A[1]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106062/D1103824(relative), L1104644/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104644/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].A[3], backplane.SWH-1.slot.P[1].D[7]")
+    (description = "backplane.SWH-2.slot.P[1].A[3], backplane.SWH-1.slot.P[1].D[7] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].A[3] and backplane.SWH-1.slot.P[1].D[7] grounds are connected together")
+    (locators = L1106064/D1103824(relative), L1104646/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].A[3], backplane.SWH-1.slot.P[1].D[7]")
+    (description = "backplane.SWH-2.slot.P[1].A[3], backplane.SWH-1.slot.P[1].D[7] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].D[7]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].A[3]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106064/D1103824(relative), L1104646/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].A[3], backplane.SWH-1.slot.P[1].D[7]")
+    (description = "backplane.SWH-2.slot.P[1].A[3], backplane.SWH-1.slot.P[1].D[7] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].D[7]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].A[3]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106064/D1103824(relative), L1104646/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104646/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104648/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104650/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104652/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].D[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].D[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104654/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104657/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104658/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104659/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104660/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[1], backplane.SWH-1.slot.P[1].E[5]")
+    (description = "backplane.SWH-2.slot.P[1].B[1], backplane.SWH-1.slot.P[1].E[5] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].B[1] and backplane.SWH-1.slot.P[1].E[5] grounds are connected together")
+    (locators = L1106079/D1103824(relative), L1104661/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[1], backplane.SWH-1.slot.P[1].E[5]")
+    (description = "backplane.SWH-2.slot.P[1].B[1], backplane.SWH-1.slot.P[1].E[5] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].E[5]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].B[1]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106079/D1103824(relative), L1104661/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[1], backplane.SWH-1.slot.P[1].E[5]")
+    (description = "backplane.SWH-2.slot.P[1].B[1], backplane.SWH-1.slot.P[1].E[5] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].E[5]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].B[1]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106079/D1103824(relative), L1104661/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104661/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[2], backplane.SWH-1.slot.P[1].E[6]")
+    (description = "backplane.SWH-2.slot.P[1].B[2], backplane.SWH-1.slot.P[1].E[6] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].B[2] and backplane.SWH-1.slot.P[1].E[6] grounds are connected together")
+    (locators = L1106080/D1103824(relative), L1104662/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[2], backplane.SWH-1.slot.P[1].E[6]")
+    (description = "backplane.SWH-2.slot.P[1].B[2], backplane.SWH-1.slot.P[1].E[6] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].E[6]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].B[2]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106080/D1103824(relative), L1104662/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[2], backplane.SWH-1.slot.P[1].E[6]")
+    (description = "backplane.SWH-2.slot.P[1].B[2], backplane.SWH-1.slot.P[1].E[6] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].E[6]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].B[2]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106080/D1103824(relative), L1104662/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104662/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[3], backplane.SWH-1.slot.P[1].E[7]")
+    (description = "backplane.SWH-2.slot.P[1].B[3], backplane.SWH-1.slot.P[1].E[7] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].B[3] and backplane.SWH-1.slot.P[1].E[7] grounds are connected together")
+    (locators = L1106081/D1103824(relative), L1104663/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[3], backplane.SWH-1.slot.P[1].E[7]")
+    (description = "backplane.SWH-2.slot.P[1].B[3], backplane.SWH-1.slot.P[1].E[7] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].E[7]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].B[3]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106081/D1103824(relative), L1104663/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[3], backplane.SWH-1.slot.P[1].E[7]")
+    (description = "backplane.SWH-2.slot.P[1].B[3], backplane.SWH-1.slot.P[1].E[7] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].E[7]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].B[3]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106081/D1103824(relative), L1104663/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104663/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[4], backplane.SWH-1.slot.P[1].E[8]")
+    (description = "backplane.SWH-2.slot.P[1].B[4], backplane.SWH-1.slot.P[1].E[8] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].B[4] and backplane.SWH-1.slot.P[1].E[8] grounds are connected together")
+    (locators = L1106082/D1103824(relative), L1104664/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[4], backplane.SWH-1.slot.P[1].E[8]")
+    (description = "backplane.SWH-2.slot.P[1].B[4], backplane.SWH-1.slot.P[1].E[8] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].E[8]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].B[4]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106082/D1103824(relative), L1104664/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].B[4], backplane.SWH-1.slot.P[1].E[8]")
+    (description = "backplane.SWH-2.slot.P[1].B[4], backplane.SWH-1.slot.P[1].E[8] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].E[8]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].B[4]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106082/D1103824(relative), L1104664/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104664/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104665/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104666/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104667/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104668/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104669/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104670/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104671/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].E[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].E[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104672/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104675/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104677/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].C[2], backplane.SWH-1.slot.P[1].F[6]")
+    (description = "backplane.SWH-2.slot.P[1].C[2], backplane.SWH-1.slot.P[1].F[6] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].C[2] and backplane.SWH-1.slot.P[1].F[6] grounds are connected together")
+    (locators = L1106097/D1103824(relative), L1104679/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].C[2], backplane.SWH-1.slot.P[1].F[6]")
+    (description = "backplane.SWH-2.slot.P[1].C[2], backplane.SWH-1.slot.P[1].F[6] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].F[6]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].C[2]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106097/D1103824(relative), L1104679/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].C[2], backplane.SWH-1.slot.P[1].F[6]")
+    (description = "backplane.SWH-2.slot.P[1].C[2], backplane.SWH-1.slot.P[1].F[6] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].F[6]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].C[2]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106097/D1103824(relative), L1104679/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104679/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:314.10: Check 'input-push-pull-levels' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:379.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:368.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].C[4], backplane.SWH-1.slot.P[1].F[8]")
+    (description = "backplane.SWH-2.slot.P[1].C[4], backplane.SWH-1.slot.P[1].F[8] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that digital i/o pins share a ground net")
+    (message = "backplane.SWH-2.slot.P[1].C[4] and backplane.SWH-1.slot.P[1].F[8] grounds are connected together")
+    (locators = L1106099/D1103824(relative), L1104681/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:336.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].C[4], backplane.SWH-1.slot.P[1].F[8]")
+    (description = "backplane.SWH-2.slot.P[1].C[4], backplane.SWH-1.slot.P[1].F[8] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the min voh is greater than max vih")
+    (message = "backplane.SWH-1.slot.P[1].F[8]\'s min voh (Toleranced(2.5 <= 2.6 <= 2.7)) greater than backplane.SWH-2.slot.P[1].C[4]\'s max vih (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106099/D1103824(relative), L1104681/D1103824(relative))
+  open-components-database/utils/netlist-checks/io-checks.stanza:351.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].C[4], backplane.SWH-1.slot.P[1].F[8]")
+    (description = "backplane.SWH-2.slot.P[1].C[4], backplane.SWH-1.slot.P[1].F[8] digital I/O Properties")
+    (category = "IO Checks")
+    (subcheck-description = "Check that the max vol is less than min vil")
+    (message = "backplane.SWH-1.slot.P[1].F[8]\'s max vol (Toleranced(2.5 <= 2.6 <= 2.7)) is less than backplane.SWH-2.slot.P[1].C[4]\'s min vil (Toleranced(2.2 <= 2.2 <= 2.2))")
+    (locators = L1106099/D1103824(relative), L1104681/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104681/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104683/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104685/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104687/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-1.slot.P[1].F[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-1.slot.P[1].F[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1104689/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1105993/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1105995/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1105997/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1105999/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106001/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106003/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106005/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].D[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].D[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106007/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106010/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106011/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[3]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[3] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106012/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106013/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106014/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106015/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106016/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106017/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106018/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106019/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106020/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106021/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106022/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106023/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106024/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].E[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].E[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106025/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106028/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[4]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[4] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106030/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106032/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106034/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106036/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106038/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106040/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[0].F[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[0].F[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106042/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106117/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106119/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106121/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106123/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106125/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].D[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].D[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106127/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[5]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[5] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106134/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106135/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[7]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[7] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106136/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106137/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[9]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[9] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106138/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106139/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[11]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[11] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106140/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106141/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[13]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[13] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106142/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106143/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106144/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].E[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].E[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106145/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[6]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[6] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106152/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[8]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[8] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106154/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[10]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[10] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106156/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[12]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[12] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106158/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[14]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[14] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106160/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.SWH-2.slot.P[1].F[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.SWH-2.slot.P[1].F[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1106162/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].D[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].D[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107352/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].D[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].D[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107366/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].E[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].E[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107369/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].E[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].E[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107370/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].E[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].E[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107383/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].E[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].E[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107384/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].F[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].F[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107387/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[0].slot.P[0].F[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[0].slot.P[0].F[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1107401/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].D[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].D[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108641/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].D[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].D[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108655/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].E[1]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].E[1] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108658/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].E[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].E[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108659/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].E[15]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].E[15] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108672/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].E[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].E[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108673/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].F[2]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].F[2] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108676/D1103824(relative))
+
+open-components-database/utils/netlist-checks/io-checks.stanza:52.6: Check 'digital-output' passed.
+  Defined at open-components-database/utils/netlist-checks/io-checks.stanza:73.0.
+  open-components-database/utils/netlist-checks/io-checks.stanza:75.2: Assertion passed:
+    (name = "backplane.IO[1].slot.P[0].F[16]")
+    (description = "Check multi output nets")
+    (category = "IO Checks")
+    (subcheck-description = "Check there is at least one non-tristateable output pin")
+    (message = "Output pins backplane.IO[1].slot.P[0].F[16] are connected together and at most 1 of them is non-tristateable")
+    (locators = L1108690/D1103824(relative))

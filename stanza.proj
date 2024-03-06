@@ -1,0 +1,8 @@
+package vpx-profiles defined-in "vpx-profiles.stanza"
+package vpx-supports defined-in "vpx-supports.stanza"
+package vpx-pin-maps defined-in "vpx-pin-maps.stanza"
+package ICD-bundles  defined-in "ICD-bundles.stanza"
+
+package components/TE_1-6450869-4 defined-in "components/TE_1-6450869-4.stanza"
+
+include "open-components-database/stanza.proj"

@@ -1,0 +1,125 @@
+#use-added-syntax(jitx)
+defpackage vpx-supports :
+  import core
+  import collections
+  import jitx
+  import jitx/commands
+  import ocdb/utils/defaults
+  import ocdb/utils/checks
+  import ocdb/utils/landpatterns
+  import ocdb/utils/generator-utils
+  import ocdb/utils/generic-components
+  import ocdb/utils/bundles
+  import ocdb/utils/property-structs
+  import vpx-pin-maps
+  
+public pcb-bundle ethernet-10GBASE-KR :
+  port tx : diff-pair
+  port rx : diff-pair
+
+public pcb-bundle pci-e (-- lanes:Int = 1) :
+  if lanes == 1 :
+    port tx : diff-pair
+    port rx : diff-pair
+  else:
+    port tx : diff-pair[lanes]
+    port rx : diff-pair[lanes]
+
+public defn connect-ethernet-10GBASE-KR (x:JITXObject, y:JITXObject) :
+  inside pcb-module:
+    net (x.rx, y.tx)
+    net (x.tx, y.rx)
+
+public defn connect-pipe (x:JITXObject, y:JITXObject) :
+  inside pcb-module:
+    net TX (x.rx, y.tx)
+    net RX (x.tx, y.rx)
+    set-netclass(TX, 0.12, 0.12) ; 4 Mil
+    set-netclass(RX, 0.12, 0.12); 4 Mil
+
+
+public defn connect-pci-e (x:JITXObject, y:JITXObject) :
+  inside pcb-module:
+    net (x.rx, y.tx)
+    net (x.tx, y.rx)
+
+public defn connect-x4-pci-e (x:JITXObject, y:JITXObject) :
+  inside pcb-module:
+    require fp1:fat-pipe from x
+    require fp2:fat-pipe from y
+    for i in 0 to 4 do :
+      net (fp1.rx[i] fp2.tx[i])
+      net (fp1.tx[i] fp2.rx[i])
+
+  
+public defn connect-10GBASE-KX4 (x:JITXObject, y:JITXObject) :
+  inside pcb-module:
+    require fp1:fat-pipe from x
+    require fp2:fat-pipe from y
+    for i in 0 to 4 do :
+      net (fp1.rx[i] fp2.tx[i])
+      net (fp1.tx[i] fp2.rx[i])
+
+public pcb-bundle pipe (-- width:Int = 1) :
+  if width == 1 :
+    port tx : diff-pair
+    port rx : diff-pair
+  else:
+    port tx : diff-pair[width]
+    port rx : diff-pair[width]
+
+public pcb-bundle fat-pipe :
+  port rx : diff-pair[4]
+  port tx : diff-pair[4]
+
+public pcb-bundle thin-pipe :
+  port rx : diff-pair[2]
+  port tx : diff-pair[2]
+
+public pcb-bundle ultra-thin-pipe :
+  port rx : diff-pair
+  port tx : diff-pair
+
+public pcb-bundle triple-ultra-thin-pipe :
+  port rx : diff-pair[3]
+  port tx : diff-pair[3]
+
+public pcb-bundle vpx-utility :
+  port sm: pin[4]
+  port ga : pin[5]
+  pin gap
+  port ref-clk: diff-pair
+  port aux-clk: diff-pair
+  port jtag : jtag()
+  port vpx-power : power[3]
+  pin minus12v-aux
+  pin p3v3-aux
+  pin p12v-aux
+  pin sysreset
+  pin nvmro
+  pin gdiscrete1 
+  pin p1-vbat 
+  pin sys-con 
+  pin maskable-reset
+
+public pcb-bundle px-power :
+  port DC_IN : power
+  pin FAIL*
+  pin INHIBIT*
+  pin ENABLE*
+  pin P+12Vaux
+  pin P+3p3Vaux
+  pin *GA0
+  pin *GA1
+  port SM : i2c
+  pin P-12Vaux
+  pin SYS_RESET*
+  pin SIGNAL_RETURN
+  pin P+12Vsense
+  pin P+3p3Vsense
+  pin P+5Vsense
+  pin SENSE_RETURN
+  pin P+5Vmain
+  pin POWER_RETURN
+  pin P+3p3Vmain
+  pin P+12Vmain

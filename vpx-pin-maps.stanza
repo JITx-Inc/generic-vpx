@@ -1,0 +1,224 @@
+#use-added-syntax(jitx)
+defpackage vpx-pin-maps :
+  import core
+  import collections
+  import jitx
+  import jitx/commands
+  import ocdb/utils/defaults
+  import ocdb/utils/checks
+  import ocdb/utils/landpatterns
+  import ocdb/utils/generator-utils
+  import ocdb/utils/generic-components
+  import ocdb/utils/bundles
+  import ocdb/utils/property-structs
+
+  import vpx-supports
+
+public defn connect-vpx-jtag (x:JITXObject, y:JITXObject) :
+  inside pcb-module :
+    if x != y :
+      net tdo (x.jtag.tdi y.jtag.tdo)
+
+public defn connect-vpx-utility (x:JITXObject, y:JITXObject) :
+  inside pcb-module :
+    if x != y :
+      net (x.jtag.tms y.jtag.tms)
+      net (x.jtag.tck y.jtag.tck)
+
+      net (x.p3v3-aux y.p3v3-aux)  
+      net (x.p12v-aux y.p12v-aux)  
+      net (x.minus12v-aux y.minus12v-aux)  
+      net (x.vpx-power y.vpx-power)  
+      net (x.sysreset y.sysreset)  
+      net (x.ref-clk y.ref-clk)  
+      net (x.aux-clk y.aux-clk)
+
+public defn set-vpx-utility-properties (x:JITXObject) :
+  inside pcb-module :
+    property(x.p3v3-aux.voltage) = typ(3.3)
+    property(x.p12v-aux.voltage) = typ(12.0)
+    property(x.minus12v-aux.voltage) = typ(-12.0)
+    property(x.vpx-power[0].gnd) = typ(0.0)  
+    property(x.vpx-power[1].gnd) = typ(0.0)  
+    property(x.vpx-power[2].gnd) = typ(0.0)  
+
+
+; Module profile
+public pcb-enum vpx-profiles/InterfaceType :
+  Backplane
+  DaughterCard
+
+pcb-landpattern chop :
+  layer(Cutout()) = RoundedRectangle(28.0, 12.0, 1.0)
+
+public pcb-component aperture-cutout  :
+  landpattern      = chop()
+  symbol           = ocdb/utils/symbols/unplated-hole-sym()
+  property(self.rated-temperature) = false
+
+public defn set-netclass (n:JITXObject, trace:Double space:Double) :
+  inside pcb-module :
+    property(n.net-class) = NetClass(`USB, [`min-trace => trace `min-space => space])
+
+public pcb-module vpx-3u (-- interface:InterfaceType = Backplane,  aperture:True|False = false):
+  port utility : vpx-utility ; Utility plane, all signals except slot-profile defined
+  port slot-profile-defined: pin[4] ; slot profile defined pins on P1 row G, G7 is pin 0
+  port vpx-sig : pin[8] ; Row G P2 signal pins, [0] is G1 and [7] is G15
+  ; All VPX Pairs outside of utility area, [0][0] is A1/B1 on P1, [0][1] is D1/E1 on P1,
+  ;   and [1][2] is B2/C2 on P2
+  port vpx-pairs : diff-pair[2][32] 
+  public inst P0 :   
+    if interface == DaughterCard :
+      ocdb/components/te-connectivity/2102772-1/component
+    else :
+      ocdb/components/te-connectivity/2102735-1/component
+
+
+  val n-con  = if aperture : 1 else : 2
+  public inst P : 
+    if interface == DaughterCard :
+      ocdb/components/te-connectivity/2102771-1/component[n-con] ; P1 and P2 of standard
+    else :
+      ocdb/components/te-connectivity/2102736-1/component[n-con]
+  ; for i in 0 to 8 do :
+  ;   schematic-group( P0,i ) = (Ref( to-string("utility-%_" % [(i + 1)] ) ) )
+  ; for i in 0 to 16 do :
+  ;   schematic-group( P[0],i ) = (Ref( to-string("data-control1-%_" % [(i + 1)] ) ) )
+  ;   schematic-group( P[1],i ) = (Ref( to-string("data-control2-%_" % [(i + 1)] ) ) )
+  schematic-group(self) = vpx-3u
+  place(P0) at loc(21.73 + 28.8, 0.0) on Top
+  place(P[0]) at loc(28.8, 0.0) on Top
+  if not aperture :
+    place(P[1]) at loc(0.0, 0.0) on Top
+  else :
+    inst cutout : aperture-cutout
+    place(cutout) at loc(0.0, 0.0) on Top
+    
+  ; Keys are notional
+  inst key : mounting-hole(3.0)[2]
+  place(key[0]) at loc(-20.0, 0.0) on Top
+  place(key[1]) at loc(21.73 + 28.8 +  20.0 - 5.0, 0.0) on Top
+
+; Utility Plane
+  defn get-net (name:String) :
+    find!({ref(_) == Ref(name)}, nets(self))  
+; P0 Map
+  val p0-pins = Vector<String>()
+  ; Columns 1 through 3 handled by loops
+  ; note this list goes G to A and 4 to 8. It's written this way to match table 3.7-1 in VITA standard
+  add-all(p0-pins, ["sm2","sm3",      "gnd",      "minus12v-aux","gnd","sysreset","nvmro"])
+  add-all(p0-pins, ["gap","ga4",      "gnd",      "p3v3-aux",    "gnd","sm0",   "sm1"])
+  add-all(p0-pins, ["ga3","ga2",      "gnd",      "p12v-aux",    "gnd","ga1",   "ga0"])
+  add-all(p0-pins, ["tck","gnd",      "tdo",      "tdi",         "gnd","tms",     "trst"])
+  add-all(p0-pins, ["gnd","ref-clk-n","ref-clk-p","gnd",   "aux-clk-n","aux-clk-p","gnd"])
+
+  val netlist = unique(p0-pins)
+  for n in netlist do:
+    make-net(to-symbol(n) [], true)
+    make-pin(to-symbol(string-join("pin-",n)) )
+  net (get-net("sm0") utility.sm[0])
+  net (get-net("sm1") utility.sm[1])
+  net (get-net("sm2") utility.sm[2])
+  net (get-net("sm3") utility.sm[3])
+  net (get-net("ga0") utility.ga[0])
+  net (get-net("ga1") utility.ga[1])
+  net (get-net("ga2") utility.ga[2])
+  net (get-net("ga3") utility.ga[3])
+  net (get-net("ga4") utility.ga[4])
+  net (get-net("gap") utility.gap)
+  net (get-net("sysreset") utility.sysreset)
+  net (get-net("nvmro") utility.nvmro)
+  net (get-net("minus12v-aux") utility.minus12v-aux)
+  net (get-net("p3v3-aux") utility.p3v3-aux)
+  net (get-net("p12v-aux") utility.p12v-aux)
+  net (get-net("ref-clk-n") utility.ref-clk.N)
+  net (get-net("ref-clk-p") utility.ref-clk.P)
+  net (get-net("aux-clk-n") utility.aux-clk.N)
+  net (get-net("aux-clk-p") utility.aux-clk.P)
+  net (get-net("tck") utility.jtag.tck)
+  net (get-net("tdi") utility.jtag.tdi)
+  net (get-net("tdo") utility.jtag.tdo)
+  net (get-net("tms") utility.jtag.tms)
+  net (get-net("trst") utility.jtag.trstn)
+  net gnd (get-net("gnd") utility.vpx-power[0].gnd utility.vpx-power[1].gnd utility.vpx-power[2].gnd)
+  net vpx-pwr-vdd0 (utility.vpx-power[0].vdd)
+  net vpx-pwr-vdd1 (utility.vpx-power[1].vdd)
+  net vpx-pwr-vdd2 (utility.vpx-power[2].vdd)
+
+  defn pin-name (r:Int, c:Int) :
+    val letter = red-alph-letter(r)
+    Ref(letter)[c + 1]
+
+  defn P0-map (r:Int, c:Int) :
+    val name = pin-name(r,c)
+    if c < 2 : ; Handle Columns 1-2
+      if r > 3 : ; vs1
+        net (utility.vpx-power[0].vdd, P0.(name))
+      ; else if r == 3 : ; no pad
+      ;   net (gnd, P0.(name))
+      else if r < 3 : ; vs2
+        net (utility.vpx-power[1].vdd, P0.(name))
+    else if c == 2 : ; handle column 3
+      if not-equal?(r, 3) : ; vs3
+        net (utility.vpx-power[2].vdd, P0.(name))
+      ; else : ; no pad
+      ;   net (gnd, P0.(name))
+    else if c > 2 : 
+      net (get-net(p0-pins[(7 * (c - 3)) + (6 - r)]), P0.(name))
+    []
+
+  for c in 0 to 8 do :
+    for r in 0 to 7 do :
+      P0-map(r,c)
+; Utility Signals outside of P0
+  net (utility.gdiscrete1 P[0].(pin-name(6, 0)))
+  net (utility.p1-vbat P[0].(pin-name(6, 2)))
+  net (utility.sys-con P[0].(pin-name(6, 4)))
+  for i in 0 to 4 do :
+    net (slot-profile-defined[i] P[0].(pin-name(6, (6 + (2 * i)))) )
+  net (utility.maskable-reset P[0].(pin-name(6, 14)))
+
+  defn vpx-map (r:Int, c:Int, con:Int) :
+    val name = pin-name(r,c)
+    ; println("r: %_ c: %_ con %_ name %_ " % [r c con name])
+    if c % 2 == 1 :
+      if r % 3 == 1 :
+        net (P[con].(name), vpx-pairs[con][2 * c + (r / 3)].P)
+        ; println("P[%_].(%_), vpx-pairs[%_][%_].P" % [con name con (2 * c + (r / 3))])
+      else if r % 3 == 2 :
+        net (P[con].(name), vpx-pairs[con][2 * c + (r / 3)].N)
+      else :
+        net (P[con].(name), gnd)
+        ; println("gnd")
+    else :
+      if r == 6 :
+        if con == 1 :
+          if c % 2 == 0 :
+            net (P[con].(name), vpx-sig[c / 2])
+            ; println("P[%_].(%_), vpx-sig[%_]" % [con name  (c / 2)])
+
+      else :
+        if r % 3 == 0 :
+          net (P[con].(name), vpx-pairs[con][2 * c + (r / 3)].P)
+          ; println("P[%_].(%_), vpx-pairs[%_][%_].P" % [con name con (2 * c + (r / 3))])
+        else if r % 3 == 1 :
+          net (P[con].(name), vpx-pairs[con][2 * c + (r / 3)].N)
+          ; println("P[%_].(%_), vpx-pairs[%_][%_].N" % [con name con (2 * c + (r / 3))])
+        else :
+          ; println("gnd")
+          net (P[con].(name), gnd)
+    []
+
+  for i in 0 to n-con do :
+    for c in 0 to 16 do :
+      for r in 0 to 7 do :
+        vpx-map(r,c,i)
+  
+public defn get-base-pin (p:JITXObject, slot:JITXObject) -> JITXObject:
+  connected-pins(p, component-instances(slot))[0]
+
+public defn connected-pins (pin:JITXObject, instances:Tuple<JITXObject>) -> Tuple<JITXObject> :
+  to-tuple $
+    for instance in instances seq-cat :
+      for inst-pin in pins(instance) filter :
+        connected?([pin, inst-pin])
